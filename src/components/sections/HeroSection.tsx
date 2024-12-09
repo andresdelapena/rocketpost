@@ -13,12 +13,12 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
         <div className="flex flex-col text-center space-y-6">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
             <span className="bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Finally, Emails That Sound Like You
+              Save Time. Let AI Send Authentic
             </span>
-            <span className="block mt-2">Without the Extra Work.</span>
+            <span className="block mt-2">Client Emails for You.</span>
           </h1>
           <p className="text-muted-foreground text-lg mx-auto max-w-[600px]">
-            Regardss helps you write professional, polished client emails in seconds—saving you time and letting you focus on what really matters.
+            With Regards, your AI-powered assistant learns your style and role so every client email feels authentic. Save time, impress clients, and focus on what truly matters.
           </p>
         </div>
         
