@@ -18,7 +18,7 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
             <span className="block mt-2">Client Emails for You.</span>
           </h1>
           <p className="text-muted-foreground text-lg mx-auto max-w-[600px]">
-            With Regards, your AI-powered assistant learns your style and role so every client email feels authentic. Save time, impress clients, and focus on what truly matters.
+            With Regardss, your AI-powered assistant learns your style and role so every client email feels authentic. Save time, impress clients, and focus on what truly matters.
           </p>
         </div>
         
