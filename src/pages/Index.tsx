@@ -108,7 +108,11 @@ export default function Index() {
               Save time, stay professional, and send emails that feel personal—without the extra work.
             </p>
             <div className="space-y-4">
-              <Button size="lg" onClick={handleWaitlistClick} className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white hover:from-blue-700 hover:to-cyan-500">
+              <Button 
+                size="lg" 
+                onClick={handleWaitlistClick}
+                className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white hover:from-blue-700 hover:to-cyan-500"
+              >
                 Join the Waitlist Now
               </Button>
               <p className="text-sm text-muted-foreground">

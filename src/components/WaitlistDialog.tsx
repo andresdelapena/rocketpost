@@ -23,7 +23,7 @@ export function WaitlistDialog({
     console.log("Submitting email:", email);
 
     try {
-      const response = await fetch("https://webhook.site/YOUR-WEBHOOK-URL", {
+      const response = await fetch("https://hook.eu2.make.com/9usncqxw93i58oglf3l5p8r4b7vusblj", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
