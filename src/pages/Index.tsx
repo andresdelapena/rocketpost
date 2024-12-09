@@ -26,9 +26,7 @@ export default function Index() {
       
       <main className="flex-1">
         <HeroSection scrollToSection={scrollToSection} onWaitlistClick={handleWaitlistClick} />
-        <ProblemSection />
-        <BenefitsSection />
-
+        
         {/* How It Works Section */}
         <section id="how-it-works" className="container py-24 space-y-8">
           <div className="flex flex-col items-center text-center space-y-4">
@@ -36,34 +34,39 @@ export default function Index() {
               Send Better Emails in Three Simple Steps
             </h2>
             <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:max-w-3xl">
-              {[
-                {
-                  step: "1",
-                  title: "Set Up Your Profile",
-                  description: "Add your role, tone, and tasks.",
-                },
-                {
-                  step: "2",
-                  title: "Draft or Reply",
-                  description: "Provide a few bullet points or paste your email.",
-                },
-                {
-                  step: "3",
-                  title: "Get Your Email",
-                  description: "Receive a ready-to-send email in seconds.",
-                },
-              ].map((item) => (
-                <Card key={item.step} className="bg-transparent">
-                  <CardContent className="p-6 space-y-2 bg-transparent">
-                    <div className="text-4xl font-bold text-primary">{item.step}</div>
-                    <h3 className="font-bold">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              <Card className="bg-transparent">
+                <CardContent className="p-6 space-y-2 bg-transparent">
+                  <div className="text-4xl font-bold text-primary">1</div>
+                  <h3 className="font-bold">Set Up Your Profile</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Add your role, tone, and key details. Regards adapts to your unique writing style!
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-transparent">
+                <CardContent className="p-6 space-y-2 bg-transparent">
+                  <div className="text-4xl font-bold text-primary">2</div>
+                  <h3 className="font-bold">Draft or Reply</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Share a few bullet points or paste a rough draft. Keep it simple—just your ideas.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-transparent">
+                <CardContent className="p-6 space-y-2 bg-transparent">
+                  <div className="text-4xl font-bold text-primary">3</div>
+                  <h3 className="font-bold">Get Your Email</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Click "Generate" and see Regards turn your input into a clear, professional email—ready to send!
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
+
+        <ProblemSection />
+        <BenefitsSection />
 
         {/* Trust Section */}
         <section className="container py-24 space-y-8">
