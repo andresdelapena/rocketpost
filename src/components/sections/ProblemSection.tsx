@@ -3,13 +3,13 @@ import { CheckCircle, XCircle } from "lucide-react";
 
 export function ProblemSection() {
   return (
-    <section className="container py-24 space-y-8">
+    <section className="container py-24 space-y-8 animate-fade-in">
       <div className="flex flex-col items-center text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-slide-up">
           Professional Emails Take Too Much Time.
         </h2>
         <div className="mx-auto max-w-[800px] grid gap-8 md:grid-cols-2">
-          <Card className="border-primary bg-transparent">
+          <Card className="border-primary bg-transparent transform transition-all duration-300 hover:scale-105 animate-fade-in-delay">
             <CardContent className="p-6 space-y-4 bg-transparent">
               <h3 className="font-bold text-xl">Regardss</h3>
               <ul className="space-y-3 text-left">
@@ -19,7 +19,7 @@ export function ProblemSection() {
                   "Understands Your Role: Knows your tasks and relationships.",
                   "Easy to Use: Turn bullet points into polished emails.",
                 ].map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2">
+                  <li key={index} className="flex items-start gap-2 transform transition-all duration-300 hover:translate-x-2">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-muted-foreground">{feature}</span>
                   </li>
@@ -27,7 +27,7 @@ export function ProblemSection() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="bg-transparent">
+          <Card className="bg-transparent transform transition-all duration-300 hover:scale-105 animate-fade-in-delay-2">
             <CardContent className="p-6 space-y-4 bg-transparent">
               <h3 className="font-bold text-xl">Other AI Tools</h3>
               <ul className="space-y-3 text-left">
@@ -37,7 +37,7 @@ export function ProblemSection() {
                   "No Context: Doesn't adapt to your role.",
                   "Complicated: Requires detailed, time-consuming prompts.",
                 ].map((limitation, index) => (
-                  <li key={index} className="flex items-start gap-2">
+                  <li key={index} className="flex items-start gap-2 transform transition-all duration-300 hover:translate-x-2">
                     <XCircle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-muted-foreground">{limitation}</span>
                   </li>
