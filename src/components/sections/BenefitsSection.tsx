@@ -10,7 +10,7 @@ export function BenefitsSection() {
         </h2>
         <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:max-w-3xl">
           <Card className="bg-transparent">
-            <CardContent className="p-6 space-y-2 bg-transparent">
+            <CardContent className="p-6 flex flex-col items-center space-y-2 bg-transparent">
               <Clock className="h-12 w-12 text-primary" />
               <h3 className="font-bold">Save Time</h3>
               <p className="text-sm text-muted-foreground">
@@ -19,7 +19,7 @@ export function BenefitsSection() {
             </CardContent>
           </Card>
           <Card className="bg-transparent">
-            <CardContent className="p-6 space-y-2 bg-transparent">
+            <CardContent className="p-6 flex flex-col items-center space-y-2 bg-transparent">
               <UserCheck className="h-12 w-12 text-primary" />
               <h3 className="font-bold">Sound Like You</h3>
               <p className="text-sm text-muted-foreground">
@@ -28,7 +28,7 @@ export function BenefitsSection() {
             </CardContent>
           </Card>
           <Card className="bg-transparent">
-            <CardContent className="p-6 space-y-2 bg-transparent">
+            <CardContent className="p-6 flex flex-col items-center space-y-2 bg-transparent">
               <CheckCircle className="h-12 w-12 text-primary" />
               <h3 className="font-bold">Be Professional</h3>
               <p className="text-sm text-muted-foreground">
