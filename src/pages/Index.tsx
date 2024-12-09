@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
 import { Mail, Clock, UserCheck, ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -232,10 +233,10 @@ export default function Index() {
             © {new Date().getFullYear()} Regardss. All rights reserved.
           </p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link href="#" className="text-xs hover:underline underline-offset-4">
+            <Link to="#" className="text-xs hover:underline underline-offset-4">
               Terms of Service
             </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4">
+            <Link to="#" className="text-xs hover:underline underline-offset-4">
               Privacy Policy
             </Link>
           </nav>
@@ -243,5 +244,5 @@ export default function Index() {
       </footer>
       <WaitlistDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </div>
-  )
+  );
 }
