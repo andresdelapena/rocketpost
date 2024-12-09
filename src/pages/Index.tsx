@@ -25,7 +25,7 @@ export default function Index() {
       <Header scrollToSection={scrollToSection} onWaitlistClick={handleWaitlistClick} />
       
       <main className="flex-1">
-        <HeroSection scrollToSection={scrollToSection} />
+        <HeroSection scrollToSection={scrollToSection} onWaitlistClick={handleWaitlistClick} />
         <ProblemSection />
         <BenefitsSection />
 

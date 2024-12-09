@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void;
+  onWaitlistClick: () => void;
 }
 
-export function HeroSection({ scrollToSection }: HeroSectionProps) {
+export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionProps) {
   return (
     <section id="home" className="container py-24 space-y-8 md:py-32">
       <div className="flex flex-col items-center text-center space-y-4">
@@ -23,7 +24,11 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
           <p className="text-sm text-muted-foreground">
             If you're always emailing clients and need something that saves you time and makes you look good, this is for you.
           </p>
-          <Button size="lg" onClick={() => scrollToSection("waitlist")} className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white hover:from-blue-700 hover:to-cyan-500">
+          <Button 
+            size="lg" 
+            onClick={onWaitlistClick}
+            className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white hover:from-blue-700 hover:to-cyan-500"
+          >
             Join the Waitlist <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
