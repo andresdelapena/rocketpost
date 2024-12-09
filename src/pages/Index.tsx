@@ -22,7 +22,7 @@ export default function Index() {
 
   return (
     <div className="flex min-h-screen flex-col bg-gradient-to-b from-slate-50 to-slate-100 text-slate-900">
-      <Header scrollToSection={scrollToSection} />
+      <Header scrollToSection={scrollToSection} onWaitlistClick={handleWaitlistClick} />
       
       <main className="flex-1">
         <HeroSection scrollToSection={scrollToSection} />

@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 
 interface HeaderProps {
   scrollToSection: (sectionId: string) => void;
+  onWaitlistClick: () => void;
 }
 
-export function Header({ scrollToSection }: HeaderProps) {
+export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
@@ -24,7 +25,7 @@ export function Header({ scrollToSection }: HeaderProps) {
             How It Works
           </button>
         </nav>
-        <Button onClick={() => scrollToSection("waitlist")} className="hidden md:inline-flex">
+        <Button onClick={onWaitlistClick} className="hidden md:inline-flex">
           Join Waitlist
         </Button>
         <Button variant="outline" className="md:hidden">
