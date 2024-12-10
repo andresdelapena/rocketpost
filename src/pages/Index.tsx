@@ -7,7 +7,6 @@ import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { BenefitsSection } from "@/components/sections/BenefitsSection";
-import { SplineBackground } from "@/components/SplineBackground";
 
 export default function Index() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -22,8 +21,7 @@ export default function Index() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col text-slate-900">
-      <SplineBackground />
+    <div className="flex min-h-screen flex-col bg-gradient-to-b from-slate-50 to-slate-100 text-slate-900">
       <Header scrollToSection={scrollToSection} onWaitlistClick={handleWaitlistClick} />
       
       <main className="flex-1">
