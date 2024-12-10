@@ -39,14 +39,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signIn = async (email: string, password: string) => {
     try {
       console.log('Attempting to sign in with email:', email);
-      const { error, data } = await supabase.auth.signInWithPassword({
+      const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
-      
-      console.log('Sign in response:', { error, data });
-      
+
       if (error) {
+        console.error('Sign in error:', error);
         let errorMessage = 'Invalid email or password';
         if (error.message.includes('Email not confirmed')) {
           errorMessage = 'Please verify your email before signing in';
@@ -72,12 +71,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signUp = async (email: string, password: string) => {
     try {
       console.log('Attempting to sign up with email:', email);
-      const { error, data } = await supabase.auth.signUp({
+      const { error } = await supabase.auth.signUp({
         email,
         password,
       });
-      
-      console.log('Sign up response:', { error, data });
 
       if (error) throw error;
       
