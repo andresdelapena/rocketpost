@@ -22,12 +22,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Check active sessions and sets the user
     supabase.auth.getSession().then(({ data: { session } }) => {
+      console.log('Initial session check:', session);
       setUser(session?.user ?? null);
       setLoading(false);
     });
 
     // Listen for changes on auth state (signed in, signed out, etc.)
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      console.log('Auth state changed:', _event, session);
       setUser(session?.user ?? null);
     });
 
@@ -36,37 +38,55 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signIn = async (email: string, password: string) => {
     try {
-      const { error } = await supabase.auth.signInWithPassword({
+      console.log('Attempting to sign in with email:', email);
+      const { error, data } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
-      if (error) throw error;
+      
+      console.log('Sign in response:', { error, data });
+      
+      if (error) {
+        let errorMessage = 'Invalid email or password';
+        if (error.message.includes('Email not confirmed')) {
+          errorMessage = 'Please verify your email before signing in';
+        }
+        toast({
+          variant: "destructive",
+          title: "Error signing in",
+          description: errorMessage,
+        });
+        throw error;
+      }
+
       toast({
         title: "Welcome back!",
         description: "You've successfully signed in.",
       });
     } catch (error: any) {
-      toast({
-        variant: "destructive",
-        title: "Error signing in",
-        description: error.message,
-      });
+      console.error('Sign in error:', error);
       throw error;
     }
   };
 
   const signUp = async (email: string, password: string) => {
     try {
-      const { error } = await supabase.auth.signUp({
+      console.log('Attempting to sign up with email:', email);
+      const { error, data } = await supabase.auth.signUp({
         email,
         password,
       });
+      
+      console.log('Sign up response:', { error, data });
+
       if (error) throw error;
+      
       toast({
         title: "Welcome to Regardss!",
         description: "Please check your email to verify your account.",
       });
     } catch (error: any) {
+      console.error('Sign up error:', error);
       toast({
         variant: "destructive",
         title: "Error signing up",
@@ -78,6 +98,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signOut = async () => {
     try {
+      console.log('Attempting to sign out');
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
       toast({
@@ -85,6 +106,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         description: "You've been successfully signed out.",
       });
     } catch (error: any) {
+      console.error('Sign out error:', error);
       toast({
         variant: "destructive",
         title: "Error signing out",
@@ -96,6 +118,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const resetPassword = async (email: string) => {
     try {
+      console.log('Attempting to reset password for email:', email);
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window.location.origin}/reset-password`,
       });
@@ -105,6 +128,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         description: "Please check your email for the reset link.",
       });
     } catch (error: any) {
+      console.error('Password reset error:', error);
       toast({
         variant: "destructive",
         title: "Error resetting password",
