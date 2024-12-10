@@ -33,12 +33,12 @@ export default function Index() {
         <HeroSection scrollToSection={scrollToSection} onWaitlistClick={handleWaitlistClick} />
         
         {/* How It Works Section */}
-        <section id="how-it-works" className="container py-24 space-y-8">
+        <section id="how-it-works" className="container max-w-[1536px] mx-auto px-4 py-24 space-y-8">
           <div className="flex flex-col items-center text-center space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Send Better Emails in Three Simple Steps
             </h2>
-            <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:max-w-3xl">
+            <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full">
               <Card className="bg-transparent">
                 <CardContent className="p-6 space-y-2 bg-transparent">
                   <div className="text-4xl font-bold text-primary">1</div>
@@ -74,12 +74,12 @@ export default function Index() {
         <BenefitsSection />
 
         {/* Trust Section */}
-        <section className="container py-24 space-y-8">
+        <section className="container max-w-[1536px] mx-auto px-4 py-24 space-y-8">
           <div className="flex flex-col items-center text-center space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Emails You Can Trust
             </h2>
-            <div className="mx-auto grid gap-8 md:grid-cols-2 lg:max-w-3xl">
+            <div className="mx-auto grid gap-8 md:grid-cols-2 w-full">
               {[
                 {
                   quote: "Regardss saves me so much time—it's like having a professional writer on my team.",
@@ -107,7 +107,7 @@ export default function Index() {
         </section>
 
         {/* Final CTA Section */}
-        <section id="waitlist" className="container py-24 space-y-8">
+        <section id="waitlist" className="container max-w-[1536px] mx-auto px-4 py-24 space-y-8">
           <div className="flex flex-col items-center text-center space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Tired of Wasting Time on Emails?

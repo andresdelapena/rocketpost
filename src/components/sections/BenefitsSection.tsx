@@ -3,12 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function BenefitsSection() {
   return (
-    <section id="benefits" className="container py-24 space-y-8 animate-fade-in">
+    <section id="benefits" className="container max-w-[1536px] mx-auto px-4 py-24 space-y-8 animate-fade-in">
       <div className="flex flex-col items-center text-center space-y-4">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-slide-up">
           Why Choose Regardss?
         </h2>
-        <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:max-w-3xl">
+        <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full">
           {[
             {
               icon: Clock,

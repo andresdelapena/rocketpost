@@ -8,8 +8,8 @@ interface HeroSectionProps {
 
 export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionProps) {
   return (
-    <section id="home" className="container py-24 md:py-32 animate-fade-in">
-      <div className="max-w-3xl mx-auto space-y-8">
+    <section id="home" className="container max-w-[1536px] mx-auto px-4 py-24 md:py-32 animate-fade-in">
+      <div className="max-w-4xl mx-auto space-y-8">
         <div className="flex flex-col text-center space-y-6">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl animate-slide-up">
             <span className="bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -17,7 +17,7 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
             </span>
             <span className="block mt-2">Client Emails for You.</span>
           </h1>
-          <p className="text-muted-foreground text-lg mx-auto max-w-[600px] animate-fade-in-delay">
+          <p className="text-muted-foreground text-lg mx-auto max-w-[700px] animate-fade-in-delay">
             Regardss, your <span className="font-semibold">AI-Powered</span> assistant that learns your style and role so every email feels authentic. Save Time, Impress Clients and Focus on what Truly Matters
           </p>
         </div>
