@@ -97,9 +97,6 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image: radial-gradient(circle at center center, rgb(248, 250, 252), rgb(241, 245, 249)),
-    repeating-radial-gradient(circle at center center, rgb(248, 250, 252), rgb(248, 250, 252), 10px, transparent 20px, transparent 10px);
-    background-blend-mode: multiply;
   }
 }
 
