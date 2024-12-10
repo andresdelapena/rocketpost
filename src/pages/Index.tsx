@@ -39,8 +39,8 @@ export default function Index() {
               Send Better Emails in Three Simple Steps
             </h2>
             <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full">
-              <Card className="bg-transparent">
-                <CardContent className="p-6 space-y-2 bg-transparent">
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm">
+                <CardContent className="p-6 space-y-2">
                   <div className="text-4xl font-bold text-primary">1</div>
                   <h3 className="font-bold">Set Up Your Profile</h3>
                   <p className="text-sm text-muted-foreground">
@@ -48,8 +48,8 @@ export default function Index() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="bg-transparent">
-                <CardContent className="p-6 space-y-2 bg-transparent">
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm">
+                <CardContent className="p-6 space-y-2">
                   <div className="text-4xl font-bold text-primary">2</div>
                   <h3 className="font-bold">Draft or Reply</h3>
                   <p className="text-sm text-muted-foreground">
@@ -57,8 +57,8 @@ export default function Index() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="bg-transparent">
-                <CardContent className="p-6 space-y-2 bg-transparent">
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm">
+                <CardContent className="p-6 space-y-2">
                   <div className="text-4xl font-bold text-primary">3</div>
                   <h3 className="font-bold">Get Your Email</h3>
                   <p className="text-sm text-muted-foreground">
@@ -92,8 +92,8 @@ export default function Index() {
                   role: "Account Manager",
                 },
               ].map((testimonial, i) => (
-                <Card key={i} className="bg-transparent">
-                  <CardContent className="p-6 space-y-4 bg-transparent">
+                <Card key={i} className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm">
+                  <CardContent className="p-6 space-y-4">
                     <p className="italic">{testimonial.quote}</p>
                     <div>
                       <p className="font-bold">{testimonial.author}</p>
