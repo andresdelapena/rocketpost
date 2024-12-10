@@ -26,9 +26,12 @@ export function BenefitsSection() {
               description: "Send clear, polished emails that leave a lasting impression."
             }
           ].map((benefit, index) => (
-            <Card key={index} className="bg-transparent transform transition-all duration-300 hover:scale-105 animate-fade-in-delay">
-              <CardContent className="p-6 flex flex-col items-center space-y-2 bg-transparent">
-                <benefit.icon className="h-12 w-12 text-primary" />
+            <Card 
+              key={index} 
+              className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm animate-fade-in-delay group"
+            >
+              <CardContent className="p-6 flex flex-col items-center space-y-2">
+                <benefit.icon className="h-12 w-12 text-primary transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="font-bold">{benefit.title}</h3>
                 <p className="text-sm text-muted-foreground">
                   {benefit.description}

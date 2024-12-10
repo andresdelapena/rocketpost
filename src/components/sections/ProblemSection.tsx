@@ -9,8 +9,8 @@ export function ProblemSection() {
           Professional Emails Take Too Much Time.
         </h2>
         <div className="mx-auto max-w-[800px] grid gap-8 md:grid-cols-2">
-          <Card className="border-primary bg-transparent transform transition-all duration-300 hover:scale-105 animate-fade-in-delay">
-            <CardContent className="p-6 space-y-4 bg-transparent">
+          <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm animate-fade-in-delay group">
+            <CardContent className="p-6 space-y-4">
               <h3 className="font-bold text-xl">Regardss</h3>
               <ul className="space-y-3 text-left">
                 {[
@@ -19,16 +19,16 @@ export function ProblemSection() {
                   "Understands Your Role: Knows your tasks and relationships.",
                   "Easy to Use: Turn bullet points into polished emails.",
                 ].map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2 transform transition-all duration-300 hover:translate-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <li key={index} className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-110" />
                     <span className="text-sm text-muted-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
             </CardContent>
           </Card>
-          <Card className="bg-transparent transform transition-all duration-300 hover:scale-105 animate-fade-in-delay-2">
-            <CardContent className="p-6 space-y-4 bg-transparent">
+          <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm animate-fade-in-delay-2 group">
+            <CardContent className="p-6 space-y-4">
               <h3 className="font-bold text-xl">Other AI Tools</h3>
               <ul className="space-y-3 text-left">
                 {[
@@ -37,8 +37,8 @@ export function ProblemSection() {
                   "No Context: Doesn't adapt to your role.",
                   "Complicated: Requires detailed, time-consuming prompts.",
                 ].map((limitation, index) => (
-                  <li key={index} className="flex items-start gap-2 transform transition-all duration-300 hover:translate-x-2">
-                    <XCircle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" />
+                  <li key={index} className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2">
+                    <XCircle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-110" />
                     <span className="text-sm text-muted-foreground">{limitation}</span>
                   </li>
                 ))}
