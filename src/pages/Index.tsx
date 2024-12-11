@@ -66,30 +66,6 @@ export default function Index() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="font-bold text-xl">Michael's Experience</h3>
-                  <p className="text-sm text-muted-foreground italic">
-                    "Regardss cut my email writing time in half while keeping my professional tone. Perfect for busy product managers."
-                  </p>
-                  <div className="text-left">
-                    <p className="font-bold">Michael Chen</p>
-                    <p className="text-sm text-muted-foreground">Senior Product Manager</p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="font-bold text-xl">Rachel's Feedback</h3>
-                  <p className="text-sm text-muted-foreground italic">
-                    "As a non-native speaker, Regardss helps me write with confidence. My emails are now clear and professional."
-                  </p>
-                  <div className="text-left">
-                    <p className="font-bold">Rachel Martinez</p>
-                    <p className="text-sm text-muted-foreground">Client Success Manager</p>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
@@ -104,28 +80,30 @@ export default function Index() {
               Emails You Can Trust
             </h2>
             <div className="mx-auto grid gap-8 md:grid-cols-2 w-full place-items-center">
-              {[
-                {
-                  quote: "Regardss saves me so much time—it's like having a professional writer on my team.",
-                  author: "Alex",
-                  role: "Customer Success Manager",
-                },
-                {
-                  quote: "Every email feels personal. It's seamless, and my clients love it.",
-                  author: "Sarah",
-                  role: "Account Manager",
-                },
-              ].map((testimonial, i) => (
-                <Card key={i} className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full">
-                  <CardContent className="p-6 space-y-4">
-                    <p className="italic">{testimonial.quote}</p>
-                    <div>
-                      <p className="font-bold">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="font-bold text-xl">Michael's Experience</h3>
+                  <p className="text-sm text-muted-foreground italic">
+                    "Regardss cut my email writing time in half while keeping my professional tone."
+                  </p>
+                  <div className="text-left">
+                    <p className="font-bold">Michael Chen</p>
+                    <p className="text-sm text-muted-foreground">Senior Product Manager</p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="font-bold text-xl">Rachel's Feedback</h3>
+                  <p className="text-sm text-muted-foreground italic">
+                    "As a non-native speaker, Regardss helps me write with confidence. My emails sound natural."
+                  </p>
+                  <div className="text-left">
+                    <p className="font-bold">Rachel Martinez</p>
+                    <p className="text-sm text-muted-foreground">Client Success Manager</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
