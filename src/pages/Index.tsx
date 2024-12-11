@@ -38,8 +38,8 @@ export default function Index() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Send Better Emails in Three Simple Steps
             </h2>
-            <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full">
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[16rem]">
+            <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full place-items-center">
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full">
                 <CardContent className="p-6 space-y-2">
                   <div className="text-4xl font-bold text-primary">1</div>
                   <h3 className="font-bold">Set Up Your Profile</h3>
@@ -48,7 +48,7 @@ export default function Index() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[16rem]">
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full">
                 <CardContent className="p-6 space-y-2">
                   <div className="text-4xl font-bold text-primary">2</div>
                   <h3 className="font-bold">Draft or Reply</h3>
@@ -57,7 +57,7 @@ export default function Index() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[16rem]">
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full">
                 <CardContent className="p-6 space-y-2">
                   <div className="text-4xl font-bold text-primary">3</div>
                   <h3 className="font-bold">Get Your Email</h3>
@@ -79,7 +79,7 @@ export default function Index() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Emails You Can Trust
             </h2>
-            <div className="mx-auto grid gap-8 md:grid-cols-2 w-full">
+            <div className="mx-auto grid gap-8 md:grid-cols-2 w-full place-items-center">
               {[
                 {
                   quote: "Regardss saves me so much time—it's like having a professional writer on my team.",
@@ -92,7 +92,7 @@ export default function Index() {
                   role: "Account Manager",
                 },
               ].map((testimonial, i) => (
-                <Card key={i} className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[16rem] mx-auto">
+                <Card key={i} className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full">
                   <CardContent className="p-6 space-y-4">
                     <p className="italic">{testimonial.quote}</p>
                     <div>

@@ -8,7 +8,7 @@ export function BenefitsSection() {
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-slide-up">
           Why Choose Regardss?
         </h2>
-        <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full">
+        <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full place-items-center">
           {[
             {
               icon: Clock,
@@ -28,7 +28,7 @@ export function BenefitsSection() {
           ].map((benefit, index) => (
             <Card 
               key={index} 
-              className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm animate-fade-in-delay group"
+              className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full animate-fade-in-delay group"
             >
               <CardContent className="p-6 flex flex-col items-center space-y-2">
                 <benefit.icon className="h-12 w-12 text-primary transition-transform duration-300 group-hover:scale-110" />

@@ -8,8 +8,8 @@ export function ProblemSection() {
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-slide-up">
           Professional Emails Take Too Much Time.
         </h2>
-        <div className="mx-auto grid gap-8 md:grid-cols-2 w-full">
-          <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm animate-fade-in-delay group">
+        <div className="mx-auto grid gap-8 md:grid-cols-2 w-full place-items-center">
+          <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full animate-fade-in-delay group">
             <CardContent className="p-6 space-y-4">
               <h3 className="font-bold text-xl">Regardss</h3>
               <ul className="space-y-3 text-left">
@@ -27,7 +27,7 @@ export function ProblemSection() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm animate-fade-in-delay-2 group">
+          <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full animate-fade-in-delay-2 group">
             <CardContent className="p-6 space-y-4">
               <h3 className="font-bold text-xl">Other AI Tools</h3>
               <ul className="space-y-3 text-left">
