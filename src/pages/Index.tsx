@@ -33,7 +33,7 @@ export default function Index() {
         <HeroSection scrollToSection={scrollToSection} onWaitlistClick={handleWaitlistClick} />
         
         {/* How It Works Section */}
-        <section id="how-it-works" className="container max-w-[1536px] mx-auto px-4 py-24 space-y-8">
+        <section id="how-it-works" className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
           <div className="flex flex-col items-center text-center space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Send Better Emails in Three Simple Steps
@@ -74,7 +74,7 @@ export default function Index() {
         <BenefitsSection />
 
         {/* Trust Section */}
-        <section className="container max-w-[1536px] mx-auto px-4 py-24 space-y-8">
+        <section className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
           <div className="flex flex-col items-center text-center space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Emails You Can Trust
@@ -107,7 +107,7 @@ export default function Index() {
         </section>
 
         {/* Final CTA Section */}
-        <section id="waitlist" className="container max-w-[1536px] mx-auto px-4 py-24 space-y-8">
+        <section id="waitlist" className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
           <div className="flex flex-col items-center text-center space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Tired of Wasting Time on Emails?
