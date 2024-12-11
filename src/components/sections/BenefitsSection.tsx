@@ -9,7 +9,7 @@ export function BenefitsSection() {
           Why Choose Regardss?
         </h2>
         <p className="text-lg text-muted-foreground max-w-[42rem] mx-auto">
-          Regardss helps client-facing professionals save time writing and replying to emails with an AI assistant trained on your company, role, and tone
+          Regardss helps <strong>client-facing</strong> professionals <strong>save time</strong> writing and replying to emails with an AI assistant <strong>trained on your</strong> company, role, and tone
         </p>
         <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full place-items-center">
           {[
