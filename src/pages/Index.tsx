@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { BenefitsSection } from "@/components/sections/BenefitsSection";
+import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
+import { TrustSection } from "@/components/sections/TrustSection";
+import { FinalCTASection } from "@/components/sections/FinalCTASection";
 
 export default function Index() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -31,128 +32,11 @@ export default function Index() {
       
       <main className="flex-1">
         <HeroSection scrollToSection={scrollToSection} onWaitlistClick={handleWaitlistClick} />
-        
-        {/* How It Works Section */}
-        <section id="how-it-works" className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
-          <div className="flex flex-col items-center text-center space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Send Better Emails in Three Simple Steps
-            </h2>
-            <div className="mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-3 w-full place-items-center">
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
-                <CardContent className="p-6 space-y-2">
-                  <div className="text-4xl font-bold text-primary">1</div>
-                  <h3 className="font-bold">Set Up Your Profile</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Add your role, tone, and key details. Regards adapts to your unique writing style!
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
-                <CardContent className="p-6 space-y-2">
-                  <div className="text-4xl font-bold text-primary">2</div>
-                  <h3 className="font-bold">Draft or Reply</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Share a few bullet points or paste a rough draft. Keep it simple—just your ideas.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
-                <CardContent className="p-6 space-y-2">
-                  <div className="text-4xl font-bold text-primary">3</div>
-                  <h3 className="font-bold">Get Your Email</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Click "Generate" and see Regards turn your input into a clear, professional email—ready to send!
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
+        <HowItWorksSection />
         <ProblemSection />
         <BenefitsSection />
-
-        {/* Trust Section */}
-        <section className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
-          <div className="flex flex-col items-center text-center space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Emails You Can Trust
-            </h2>
-            <div className="w-full overflow-x-auto pb-4">
-              <div className="flex gap-8 min-w-max px-4">
-                <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm w-[20rem]">
-                  <CardContent className="p-6 space-y-4">
-                    <p className="text-sm text-muted-foreground italic">
-                      "Regardss cut my email writing time in half while keeping my professional tone."
-                    </p>
-                    <div className="text-left">
-                      <p className="font-bold">Michael Chen</p>
-                      <p className="text-sm text-muted-foreground">Senior Product Manager</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm w-[20rem]">
-                  <CardContent className="p-6 space-y-4">
-                    <p className="text-sm text-muted-foreground italic">
-                      "As a non-native speaker, Regardss helps me write with confidence. My emails sound natural."
-                    </p>
-                    <div className="text-left">
-                      <p className="font-bold">Rachel Martinez</p>
-                      <p className="text-sm text-muted-foreground">Client Success Manager</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm w-[20rem]">
-                  <CardContent className="p-6 space-y-4">
-                    <p className="text-sm text-muted-foreground italic">
-                      "Perfect for quick responses that still maintain professionalism. A game-changer for busy days."
-                    </p>
-                    <div className="text-left">
-                      <p className="font-bold">Sarah Thompson</p>
-                      <p className="text-sm text-muted-foreground">Marketing Director</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm w-[20rem]">
-                  <CardContent className="p-6 space-y-4">
-                    <p className="text-sm text-muted-foreground italic">
-                      "Finally, an AI tool that understands context and tone. It's like having a professional editor on standby."
-                    </p>
-                    <div className="text-left">
-                      <p className="font-bold">David Park</p>
-                      <p className="text-sm text-muted-foreground">Sales Team Lead</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA Section */}
-        <section id="waitlist" className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
-          <div className="flex flex-col items-center text-center space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Tired of Wasting Time on Emails?
-            </h2>
-            <p className="text-muted-foreground md:text-xl">
-              Save time, stay professional, and send emails that feel personal—without the extra work.
-            </p>
-            <div className="space-y-4">
-              <Button 
-                size="lg" 
-                onClick={handleWaitlistClick}
-                className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white hover:from-blue-700 hover:to-cyan-500"
-              >
-                Join the Waitlist Now
-              </Button>
-              <p className="text-sm text-muted-foreground">
-                Limited spots available—sign up today!
-              </p>
-            </div>
-          </div>
-        </section>
+        <TrustSection />
+        <FinalCTASection onWaitlistClick={handleWaitlistClick} />
       </main>
 
       <Footer />
