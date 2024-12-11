@@ -32,9 +32,9 @@ export default function Index() {
       
       <main className="flex-1">
         <HeroSection scrollToSection={scrollToSection} onWaitlistClick={handleWaitlistClick} />
+        <BenefitsSection />
         <HowItWorksSection />
         <ProblemSection />
-        <BenefitsSection />
         <TrustSection />
         <FinalCTASection onWaitlistClick={handleWaitlistClick} />
       </main>
