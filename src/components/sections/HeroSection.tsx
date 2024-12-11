@@ -13,12 +13,12 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
         <div className="flex flex-col text-center space-y-6">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl animate-slide-up">
             <span className="bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Save Time. Let AI Send Authentic
+              Professional Emails Made Simple—
             </span>
-            <span className="block mt-2">Client Emails for You.</span>
+            <span className="block mt-2">No More Stress</span>
           </h1>
           <p className="text-muted-foreground text-lg mx-auto max-w-[700px] animate-fade-in-delay">
-            Regardss, your <span className="font-semibold">AI-Powered</span> assistant that learns your style and role so every email feels authentic. Save Time, Impress Clients and Focus on what Truly Matters
+            Regardss creates clear, professional emails that fit your voice and role—so every message sounds like you
           </p>
         </div>
         
