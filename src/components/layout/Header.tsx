@@ -11,7 +11,7 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-blue-200/20 bg-transparent">
+    <header className="fixed top-0 z-50 w-full border-b border-blue-200/20 bg-[linear-gradient(109.6deg,rgba(223,234,247,0.9)_11.2%,rgba(244,248,252,0.9)_91.1%)]">
       <div className="container flex h-16 items-center">
         <div className="flex items-center gap-2">
           <Mail className="h-6 w-6 text-primary" />
