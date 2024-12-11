@@ -16,7 +16,7 @@ export const HowItWorksSection = () => {
               <div className="text-4xl font-bold text-primary">1</div>
               <h3 className="font-bold">Set Up Your Profile</h3>
               <p className="text-sm text-muted-foreground">
-                Tell us about you. Regardss customizes its responses to fit your unique style and professional needs.
+                Tell us about <strong>you</strong>. Regardss customizes its responses to fit your <strong>unique style</strong> and professional needs.
               </p>
             </CardContent>
           </Card>
@@ -25,7 +25,7 @@ export const HowItWorksSection = () => {
               <div className="text-4xl font-bold text-primary">2</div>
               <h3 className="font-bold">Draft or Reply</h3>
               <p className="text-sm text-muted-foreground">
-                Write a few bullet points or paste an email you want to reply to. Keep it simple—just the key ideas.
+                Write a few <strong>bullet points</strong> or paste an email you want to reply to. Keep it <strong>simple</strong>—just the key ideas.
               </p>
             </CardContent>
           </Card>
@@ -34,13 +34,13 @@ export const HowItWorksSection = () => {
               <div className="text-4xl font-bold text-primary">3</div>
               <h3 className="font-bold">Get Your Email</h3>
               <p className="text-sm text-muted-foreground">
-                Click 'Generate' and let Regardss transform your input into a clear, professional email that's ready to send.
+                Click '<strong>Generate</strong>' and let Regardss transform your input into a clear, professional email that's <strong>ready to send</strong>.
               </p>
             </CardContent>
           </Card>
         </div>
         <p className="text-lg text-muted-foreground mt-8 italic">
-          No one will ever know it was AI-Generated. Guaranteed
+          No one will ever know it was AI-Generated. <strong>Guaranteed</strong>
         </p>
       </div>
     </section>
