@@ -38,8 +38,8 @@ export default function Index() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Send Better Emails in Three Simple Steps
             </h2>
-            <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full place-items-center">
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full">
+            <div className="mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-3 w-full place-items-center">
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
                 <CardContent className="p-6 space-y-2">
                   <div className="text-4xl font-bold text-primary">1</div>
                   <h3 className="font-bold">Set Up Your Profile</h3>
@@ -48,7 +48,7 @@ export default function Index() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full">
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
                 <CardContent className="p-6 space-y-2">
                   <div className="text-4xl font-bold text-primary">2</div>
                   <h3 className="font-bold">Draft or Reply</h3>
@@ -57,13 +57,37 @@ export default function Index() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full">
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
                 <CardContent className="p-6 space-y-2">
                   <div className="text-4xl font-bold text-primary">3</div>
                   <h3 className="font-bold">Get Your Email</h3>
                   <p className="text-sm text-muted-foreground">
                     Click "Generate" and see Regards turn your input into a clear, professional email—ready to send!
                   </p>
+                </CardContent>
+              </Card>
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="font-bold text-xl">Michael's Experience</h3>
+                  <p className="text-sm text-muted-foreground italic">
+                    "Regardss cut my email writing time in half while keeping my professional tone. Perfect for busy product managers."
+                  </p>
+                  <div className="text-left">
+                    <p className="font-bold">Michael Chen</p>
+                    <p className="text-sm text-muted-foreground">Senior Product Manager</p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="font-bold text-xl">Rachel's Feedback</h3>
+                  <p className="text-sm text-muted-foreground italic">
+                    "As a non-native speaker, Regardss helps me write with confidence. My emails are now clear and professional."
+                  </p>
+                  <div className="text-left">
+                    <p className="font-bold">Rachel Martinez</p>
+                    <p className="text-sm text-muted-foreground">Client Success Manager</p>
+                  </div>
                 </CardContent>
               </Card>
             </div>

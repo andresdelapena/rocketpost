@@ -8,7 +8,7 @@ export function ProblemSection() {
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-slide-up">
           Professional Emails Take Too Much Time.
         </h2>
-        <div className="mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-2 w-full place-items-center">
+        <div className="mx-auto grid gap-8 md:grid-cols-2 w-full place-items-center">
           <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full animate-fade-in-delay group">
             <CardContent className="p-6 space-y-4">
               <h3 className="font-bold text-xl">Regardss</h3>
@@ -47,30 +47,6 @@ export function ProblemSection() {
                   </li>
                 ))}
               </ul>
-            </CardContent>
-          </Card>
-          <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full animate-fade-in-delay-3 group">
-            <CardContent className="p-6 space-y-4">
-              <h3 className="font-bold text-xl">Michael's Experience</h3>
-              <p className="text-sm text-muted-foreground italic mb-4">
-                "As a product manager, I was spending hours crafting emails to stakeholders. Regardss helped me cut that time in half while maintaining my professional tone. The way it adapts to my communication style is impressive."
-              </p>
-              <div className="text-left">
-                <p className="font-bold">Michael Chen</p>
-                <p className="text-sm text-muted-foreground">Senior Product Manager</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full animate-fade-in-delay-4 group">
-            <CardContent className="p-6 space-y-4">
-              <h3 className="font-bold text-xl">Rachel's Feedback</h3>
-              <p className="text-sm text-muted-foreground italic mb-4">
-                "Being a non-native English speaker in client services, I always second-guessed my emails. Regardss helps me write with confidence. It keeps my personal touch while ensuring professional clarity."
-              </p>
-              <div className="text-left">
-                <p className="font-bold">Rachel Martinez</p>
-                <p className="text-sm text-muted-foreground">Client Success Manager</p>
-              </div>
             </CardContent>
           </Card>
         </div>
