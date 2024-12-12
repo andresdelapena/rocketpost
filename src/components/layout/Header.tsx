@@ -19,28 +19,16 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
         </div>
         <div className="flex-1 flex justify-end items-center gap-6">
           <nav className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:flex absolute md:relative top-16 left-0 md:top-0 w-full md:w-auto flex-col md:flex-row items-center md:items-center gap-4 md:gap-6 bg-background md:bg-transparent p-4 md:p-0 border-b md:border-0`}>
-            <button 
-              onClick={() => scrollToSection("home")} 
-              className="text-sm font-medium hover:text-primary text-center w-full md:w-auto max-w-[15.625rem]"
-            >
+            <button onClick={() => scrollToSection("home")} className="text-sm font-medium hover:text-primary text-center w-full md:w-auto max-w-[15.625rem]">
               Home
             </button>
-            <button 
-              onClick={() => scrollToSection("benefits")} 
-              className="text-sm font-medium hover:text-primary text-center w-full md:w-auto max-w-[15.625rem]"
-            >
+            <button onClick={() => scrollToSection("benefits")} className="text-sm font-medium hover:text-primary text-center w-full md:w-auto max-w-[15.625rem]">
               Benefits
             </button>
-            <button 
-              onClick={() => scrollToSection("how-it-works")} 
-              className="text-sm font-medium hover:text-primary text-center w-full md:w-auto max-w-[15.625rem]"
-            >
+            <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium hover:text-primary text-center w-full md:w-auto max-w-[15.625rem]">
               How It Works
             </button>
-            <Button 
-              onClick={onWaitlistClick} 
-              className="md:hidden w-full max-w-[15.625rem] bg-gradient-to-r from-blue-600 to-cyan-400 text-white hover:from-blue-700 hover:to-cyan-500"
-            >
+            <Button onClick={onWaitlistClick} className="md:hidden w-full max-w-[15.625rem] bg-gradient-to-r from-blue-600 to-cyan-400 text-white hover:from-blue-700 hover:to-cyan-500">
               Join Waitlist
             </Button>
           </nav>

@@ -1,23 +1,11 @@
 import { Helmet } from "react-helmet";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { BenefitsSection } from "@/components/sections/BenefitsSection";
-import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
-import { TrustSection } from "@/components/sections/TrustSection";
-import { FinalCTASection } from "@/components/sections/FinalCTASection";
+import HeroSection from "@/components/sections/HeroSection";
+import BenefitsSection from "@/components/sections/BenefitsSection";
+import HowItWorksSection from "@/components/sections/HowItWorksSection";
+import TrustSection from "@/components/sections/TrustSection";
+import FinalCTASection from "@/components/sections/FinalCTASection";
 
 export default function Index() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleWaitlistClick = () => {
-    // For now, just scroll to the waitlist section
-    scrollToSection('waitlist');
-  };
-
   return (
     <>
       <Helmet>
@@ -26,15 +14,12 @@ export default function Index() {
         <meta name="keywords" content="email assistant, AI email writer, professional emails, business communication" />
         <link rel="canonical" href="https://regardss.com" />
       </Helmet>
-      <main className="bg-background min-h-screen">
-        <HeroSection 
-          scrollToSection={scrollToSection} 
-          onWaitlistClick={handleWaitlistClick} 
-        />
+      <main>
+        <HeroSection />
         <BenefitsSection />
         <HowItWorksSection />
         <TrustSection />
-        <FinalCTASection onWaitlistClick={handleWaitlistClick} />
+        <FinalCTASection />
       </main>
     </>
   );
