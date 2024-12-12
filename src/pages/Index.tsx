@@ -6,6 +6,18 @@ import { TrustSection } from "@/components/sections/TrustSection";
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
 
 export default function Index() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleWaitlistClick = () => {
+    // For now, just scroll to the waitlist section
+    scrollToSection('waitlist');
+  };
+
   return (
     <>
       <Helmet>
@@ -15,11 +27,14 @@ export default function Index() {
         <link rel="canonical" href="https://regardss.com" />
       </Helmet>
       <main>
-        <HeroSection />
+        <HeroSection 
+          scrollToSection={scrollToSection} 
+          onWaitlistClick={handleWaitlistClick} 
+        />
         <BenefitsSection />
         <HowItWorksSection />
         <TrustSection />
-        <FinalCTASection />
+        <FinalCTASection onWaitlistClick={handleWaitlistClick} />
       </main>
     </>
   );
