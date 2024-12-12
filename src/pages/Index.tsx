@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet";
-import HeroSection from "@/components/sections/HeroSection";
-import BenefitsSection from "@/components/sections/BenefitsSection";
-import HowItWorksSection from "@/components/sections/HowItWorksSection";
-import TrustSection from "@/components/sections/TrustSection";
-import FinalCTASection from "@/components/sections/FinalCTASection";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { BenefitsSection } from "@/components/sections/BenefitsSection";
+import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
+import { TrustSection } from "@/components/sections/TrustSection";
+import { FinalCTASection } from "@/components/sections/FinalCTASection";
 
 export default function Index() {
   return (
