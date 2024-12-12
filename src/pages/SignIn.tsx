@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
@@ -27,12 +26,6 @@ export default function SignIn() {
   };
 
   return (
-    <>
-      <Helmet>
-        <title>Sign In - Regardss Email Assistant</title>
-        <meta name="description" content="Sign in to your Regardss account to access your AI-powered email assistant." />
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
     <div className="min-h-screen flex items-center justify-center px-4">
       <Card className="w-full max-w-md">
         <CardHeader>
@@ -87,6 +80,5 @@ export default function SignIn() {
         </form>
       </Card>
     </div>
-    </>
   );
 }

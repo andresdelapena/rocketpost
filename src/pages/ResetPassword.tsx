@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
@@ -46,12 +45,6 @@ export default function ResetPassword() {
   }
 
   return (
-    <>
-      <Helmet>
-        <title>Reset Password - Regardss Email Assistant</title>
-        <meta name="description" content="Reset your Regardss account password securely." />
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
     <div className="min-h-screen flex items-center justify-center px-4">
       <Card className="w-full max-w-md">
         <CardHeader>
@@ -90,6 +83,5 @@ export default function ResetPassword() {
         </form>
       </Card>
     </div>
-    </>
   );
 }
