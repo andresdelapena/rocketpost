@@ -26,7 +26,7 @@ export default function Index() {
         <meta name="keywords" content="email assistant, AI email writer, professional emails, business communication" />
         <link rel="canonical" href="https://regardss.com" />
       </Helmet>
-      <main>
+      <main className="bg-background min-h-screen">
         <HeroSection 
           scrollToSection={scrollToSection} 
           onWaitlistClick={handleWaitlistClick} 
