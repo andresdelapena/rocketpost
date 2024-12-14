@@ -34,12 +34,26 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
           
           <div className="space-y-4">
             <div className="flex justify-center -space-x-4">
-              {[1, 2, 3, 4].map((i) => (
-                <div
-                  key={i}
-                  className="w-12 h-12 rounded-full border-2 border-white bg-gray-200"
-                />
-              ))}
+              <img
+                src="/lovable-uploads/55849edb-5ca5-4fdd-8d8b-a017b1ee15e7.png"
+                alt="Profile"
+                className="w-12 h-12 rounded-full border-2 border-white object-cover"
+              />
+              <img
+                src="/lovable-uploads/0c4964c1-3224-4d35-b51c-5502a76947cf.png"
+                alt="Profile"
+                className="w-12 h-12 rounded-full border-2 border-white object-cover"
+              />
+              <img
+                src="/lovable-uploads/47356b8d-fb7b-4a49-ae24-1e5f096c43fb.png"
+                alt="Profile"
+                className="w-12 h-12 rounded-full border-2 border-white object-cover"
+              />
+              <img
+                src="/lovable-uploads/02685f35-3d68-4873-8e32-1a61bcdab4a7.png"
+                alt="Profile"
+                className="w-12 h-12 rounded-full border-2 border-white object-cover"
+              />
             </div>
             <p className="text-sm text-blue-600 font-medium">
               Join 25+ founders waiting for the best app ever!
