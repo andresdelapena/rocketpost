@@ -8,16 +8,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionProps) {
   return (
-    <section id="home" className="container relative max-w-[1536px] mx-auto px-4 py-24 md:py-32 animate-fade-in">
-      {/* Background Pattern with radial gradient mask */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMTQ3LCAxOTcsIDI1MywgMC4yKSIgc3Ryb2tlLXdpZHRoPSIxIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6Ii8+PC9nPjwvc3ZnPg==')] opacity-100" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[rgba(244,248,252,0.95)]" />
-        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[rgba(244,248,252,0.95)]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[rgba(244,248,252,0.95)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[rgba(244,248,252,0.95)]" />
-      </div>
-
+    <section id="home" className="container max-w-[1536px] mx-auto px-4 py-24 md:py-32 animate-fade-in">
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="flex flex-col text-center space-y-6">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-gray-900">
