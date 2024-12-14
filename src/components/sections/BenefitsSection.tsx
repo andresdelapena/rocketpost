@@ -14,19 +14,19 @@ export function BenefitsSection() {
         <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full place-items-center">
           {[
             {
-              icon: Clock,
-              title: "Save Time",
-              description: "No more back-and-forth—finish emails faster."
+              icon: UserCheck,
+              title: "Customizable",
+              description: "Trained on your company's voice and role for on-brand emails."
             },
             {
-              icon: UserCheck,
-              title: "Sound Like You",
-              description: "Every email feels natural and personal."
+              icon: Clock,
+              title: "Time-Saving",
+              description: "Write and reply in seconds—no edits needed."
             },
             {
               icon: CheckCircle,
-              title: "Be Professional",
-              description: "Send clear, polished emails that leave a lasting impression."
+              title: "Authentic Tone",
+              description: "Emails match your style and feel personal every time."
             }
           ].map((benefit, index) => (
             <Card 
