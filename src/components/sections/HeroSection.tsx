@@ -61,7 +61,7 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <ChevronDown 
-          className="w-6 h-6 text-gray-400 animate-bounce cursor-pointer" 
+          className="w-6 h-6 text-gray-400 hover:text-gray-600 transition-colors duration-200 cursor-pointer" 
           onClick={() => scrollToSection('benefits')}
         />
       </div>
