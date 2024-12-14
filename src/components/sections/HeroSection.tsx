@@ -7,6 +7,14 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionProps) {
+  // Array of profile image URLs
+  const profileImages = [
+    'https://images.unsplash.com/photo-1649972904349-6e44c42644a7',
+    'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+    'https://images.unsplash.com/photo-1461749280684-dccba630e2f6'
+  ];
+
   return (
     <section id="home" className="container max-w-[1536px] mx-auto px-4 py-24 md:py-32 animate-fade-in">
       <div className="max-w-4xl mx-auto space-y-12">
@@ -41,12 +49,12 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
           
           <div className="space-y-4">
             <div className="flex justify-center -space-x-4">
-              {[1, 2, 3, 4].map((i) => (
+              {profileImages.map((imageUrl, i) => (
                 <div
                   key={i}
                   className="w-12 h-12 rounded-full border-2 border-white bg-gray-200"
                   style={{
-                    backgroundImage: `url(https://source.unsplash.com/random/150x150?face&${i})`,
+                    backgroundImage: `url(${imageUrl})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
