@@ -1,4 +1,4 @@
-import { Mail } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -14,7 +14,7 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
     <header className="fixed top-0 z-50 w-full border-b border-blue-200/20 bg-[linear-gradient(109.6deg,rgba(223,234,247,0.9)_11.2%,rgba(244,248,252,0.9)_91.1%)]">
       <div className="container flex h-16 items-center">
         <div className="flex items-center gap-2">
-          <Mail className="h-6 w-6 text-primary" />
+          <Heart className="h-6 w-6 text-blue-500 fill-current" />
           <span className="text-xl font-bold">Regardss</span>
         </div>
         <div className="flex-1 flex justify-end items-center gap-6">
