@@ -56,7 +56,7 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
               />
             </div>
             <p className="text-sm text-blue-600 font-medium">
-              Join 25+ founders waiting for the best app ever!
+              Join 25+ founders waiting for the best AI email assistant!
             </p>
           </div>
         </div>
