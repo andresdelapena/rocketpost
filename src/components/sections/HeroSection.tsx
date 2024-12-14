@@ -11,15 +11,11 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
     <section id="home" className="container max-w-[1536px] mx-auto px-4 py-24 md:py-32 animate-fade-in">
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="flex flex-col text-center space-y-6">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-gray-900 flex flex-col items-center gap-4">
-            <span className="flex items-center gap-4">Stop Sending Emails</span>
-            <span className="flex items-center gap-4">
-              That Sound Like a
-              <span className="font-['Monaco'] tracking-wider bg-gray-100 px-2 rounded border border-gray-200">Bot</span>
-            </span>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-gray-900">
+            How Much Time Are You Wasting Writing Emails?
           </h1>
           <p className="text-xl text-gray-600 mx-auto max-w-[700px]">
-            AI assistant that learns your style and role, every email feels 100% YOU!!
+            Stop spending hours drafting and editing. Regardss writes emails in your voice—faster, smarter, and 100% authentic
           </p>
         </div>
         
