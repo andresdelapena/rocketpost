@@ -18,7 +18,7 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
             </span>
             <span className="flex items-center gap-4">
               That Sound Like a
-              <span className="font-['Courier_New'] tracking-wider bg-gray-100 px-2 rounded">Bot</span>
+              <span className="font-['Monaco'] tracking-wider bg-gray-100 px-2 rounded border border-gray-200">Bot</span>
             </span>
           </h1>
           <p className="text-xl text-gray-600 mx-auto max-w-[700px]">
