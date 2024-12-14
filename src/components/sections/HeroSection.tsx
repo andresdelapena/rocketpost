@@ -9,6 +9,13 @@ interface HeroSectionProps {
 export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionProps) {
   return (
     <section id="home" className="container max-w-[1536px] mx-auto px-4 py-24 md:py-32 animate-fade-in">
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[linear-gradient(109.6deg,rgba(223,234,247,0.9)_11.2%,rgba(244,248,252,0.9)_91.1%)]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMTQ3LCAxOTcsIDI1MywgMC4zKSIgc3Ryb2tlLXdpZHRoPSIxIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6Ii8+PC9nPjwvc3ZnPg==')] opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white"></div>
+        <div className="absolute inset-0 bg-radial-gradient"></div>
+      </div>
+
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="flex flex-col text-center space-y-6">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-gray-900">
@@ -59,7 +66,7 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2">
         <ChevronDown 
           className="w-6 h-6 text-gray-400 hover:text-gray-600 transition-colors duration-200 cursor-pointer" 
           onClick={() => scrollToSection('benefits')}
