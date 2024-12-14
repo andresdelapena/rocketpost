@@ -12,10 +12,7 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="flex flex-col text-center space-y-6">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-gray-900 flex flex-col items-center gap-4">
-            <span>Stop Sending</span>
-            <span className="flex items-center gap-4">
-              <span>Emails</span>
-            </span>
+            <span className="flex items-center gap-4">Stop Sending Emails</span>
             <span className="flex items-center gap-4">
               That Sound Like a
               <span className="font-['Monaco'] tracking-wider bg-gray-100 px-2 rounded border border-gray-200">Bot</span>
