@@ -10,10 +10,10 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-blue-200/20 bg-[linear-gradient(109.6deg,rgba(223,234,247,0.9)_11.2%,rgba(244,248,252,0.9)_91.1%)]">
+    <header className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-md shadow-sm">
       <div className="container flex h-16 items-center">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-b from-blue-400 to-blue-600 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-xl bg-[#2563EB] flex items-center justify-center">
             <svg
               viewBox="0 0 24 24"
               className="w-5 h-5 text-white fill-current"
@@ -25,23 +25,23 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
           <span className="text-xl font-bold">Regardss</span>
         </div>
         <div className="flex-1 flex justify-end items-center gap-6">
-          <nav className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:flex absolute md:relative top-16 left-0 md:top-0 w-full md:w-auto flex-col md:flex-row items-center md:items-center gap-4 md:gap-6 bg-background md:bg-transparent p-4 md:p-0 border-b md:border-0`}>
-            <button onClick={() => scrollToSection("home")} className="text-sm font-medium hover:text-primary text-center w-full md:w-auto max-w-[15.625rem]">
+          <nav className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:flex absolute md:relative top-16 left-0 md:top-0 w-full md:w-auto flex-col md:flex-row items-center md:items-center gap-4 md:gap-6 bg-white md:bg-transparent p-4 md:p-0 border-b md:border-0`}>
+            <button onClick={() => scrollToSection("home")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-center w-full md:w-auto max-w-[15.625rem]">
               Home
             </button>
-            <button onClick={() => scrollToSection("benefits")} className="text-sm font-medium hover:text-primary text-center w-full md:w-auto max-w-[15.625rem]">
+            <button onClick={() => scrollToSection("benefits")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-center w-full md:w-auto max-w-[15.625rem]">
               Benefits
             </button>
-            <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium hover:text-primary text-center w-full md:w-auto max-w-[15.625rem]">
+            <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-center w-full md:w-auto max-w-[15.625rem]">
               How It Works
             </button>
-            <Button onClick={onWaitlistClick} className="md:hidden w-full max-w-[15.625rem] bg-gradient-to-r from-blue-600 to-cyan-400 text-white hover:from-blue-700 hover:to-cyan-500">
+            <Button onClick={onWaitlistClick} className="md:hidden w-full max-w-[15.625rem] bg-[#2563EB] hover:bg-blue-700 text-white">
               Join Waitlist
             </Button>
           </nav>
           <Button 
             onClick={onWaitlistClick} 
-            className="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-cyan-400 text-white hover:from-blue-700 hover:to-cyan-500"
+            className="hidden md:inline-flex bg-[#2563EB] hover:bg-blue-700 text-white rounded-full px-6"
           >
             Join Waitlist
           </Button>
