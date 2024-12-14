@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
@@ -56,6 +56,14 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <ChevronDown 
+          className="w-6 h-6 text-gray-400 animate-bounce cursor-pointer" 
+          onClick={() => scrollToSection('benefits')}
+        />
       </div>
     </section>
   );
