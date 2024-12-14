@@ -62,6 +62,13 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
               Join 25+ founders waiting for the best AI email assistant!
             </p>
           </div>
+
+          <div className="mt-8 flex justify-center">
+            <ChevronDown 
+              className="w-6 h-6 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer" 
+              onClick={() => scrollToSection('benefits')}
+            />
+          </div>
         </div>
       </div>
     </section>
