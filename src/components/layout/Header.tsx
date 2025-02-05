@@ -14,7 +14,7 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
     <header className="fixed top-0 z-50 w-full bg-[linear-gradient(109.6deg,rgba(223,234,247,0.8)_11.2%,rgba(244,248,252,0.8)_91.1%)] backdrop-blur-md shadow-sm">
       <div className="container flex h-16 items-center">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-xl bg-[#2563EB] flex items-center justify-center">
+          <div className="w-8 h-8 rounded-xl bg-[#FF6978] flex items-center justify-center">
             <svg
               viewBox="0 0 24 24"
               className="w-5 h-5 text-white fill-current"
@@ -33,13 +33,13 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
             <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-center w-full md:w-auto max-w-[15.625rem]">
               How It Works
             </button>
-            <Button onClick={onWaitlistClick} className="md:hidden w-full max-w-[15.625rem] bg-[#2563EB] hover:bg-blue-700 text-white">
+            <Button onClick={onWaitlistClick} className="md:hidden w-full max-w-[15.625rem] bg-[#FF6978] hover:bg-[#ff8591] text-white">
               Join Waitlist
             </Button>
           </nav>
           <Button 
             onClick={onWaitlistClick} 
-            className="hidden md:inline-flex bg-[#2563EB] hover:bg-blue-700 text-white rounded-full px-6"
+            className="hidden md:inline-flex bg-[#FF6978] hover:bg-[#ff8591] text-white rounded-full px-6"
           >
             Join Waitlist
           </Button>

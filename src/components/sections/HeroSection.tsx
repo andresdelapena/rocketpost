@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
@@ -12,7 +12,6 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[linear-gradient(109.6deg,rgba(223,234,247,0.9)_11.2%,rgba(244,248,252,0.9)_91.1%)]"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMTQ3LCAxOTcsIDI1MywgMC4zKSIgc3Ryb2tlLXdpZHRoPSIxIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6Ii8+PC9nPjwvc3ZnPg==')] opacity-40"></div>
-        {/* Removed the white gradient div that was causing the fade to white */}
         <div className="absolute inset-0 bg-radial-gradient"></div>
       </div>
 
@@ -30,7 +29,7 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
           <Button 
             size="lg" 
             onClick={onWaitlistClick}
-            className="bg-[#2563EB] hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
+            className="bg-[#FF6978] hover:bg-[#ff8591] text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
           >
             Join the Waitlist <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -61,13 +60,6 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
             <p className="text-sm text-blue-600 font-medium">
               Join 25+ founders waiting for the best AI email assistant!
             </p>
-          </div>
-
-          <div className="mt-8 flex justify-center">
-            <ChevronDown 
-              className="w-6 h-6 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer" 
-              onClick={() => scrollToSection('benefits')}
-            />
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default {
 				'md': '768px',
 				'lg': '1024px',
 				'xl': '1280px',
-				'2xl': '1536px'  // Increased from 1400px to 1536px
+				'2xl': '1536px'
 			}
 		},
 		extend: {
@@ -29,7 +29,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
+					DEFAULT: '#FF6978',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
@@ -74,20 +74,12 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
 				}
 			},
 			animation: {

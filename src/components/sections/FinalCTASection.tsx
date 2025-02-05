@@ -18,7 +18,7 @@ export const FinalCTASection = ({ onWaitlistClick }: FinalCTASectionProps) => {
           <Button 
             size="lg" 
             onClick={onWaitlistClick}
-            className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white hover:from-blue-700 hover:to-cyan-500"
+            className="bg-[#FF6978] hover:bg-[#ff8591] text-white"
           >
             Join the Waitlist Now
           </Button>
@@ -29,4 +29,4 @@ export const FinalCTASection = ({ onWaitlistClick }: FinalCTASectionProps) => {
       </div>
     </section>
   );
-};
+}
