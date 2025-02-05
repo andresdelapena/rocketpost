@@ -8,7 +8,7 @@ export const FinalCTASection = ({ onWaitlistClick }: FinalCTASectionProps) => {
   return (
     <section id="waitlist" className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
       <div className="flex flex-col items-center text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-[#A6A3F8] via-[#b8b6f9] to-[#ceccfa] bg-clip-text text-transparent">
           Tired of Wasting Time on Emails?
         </h2>
         <p className="text-muted-foreground md:text-xl">
