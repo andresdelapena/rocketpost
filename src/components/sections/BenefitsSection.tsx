@@ -34,7 +34,7 @@ export function BenefitsSection() {
               className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[18rem] w-full animate-fade-in-delay group"
             >
               <CardContent className="p-6 flex flex-col items-center space-y-2">
-                <benefit.icon className="h-12 w-12 text-primary transition-transform duration-300 group-hover:scale-110" />
+                <benefit.icon className="h-12 w-12 text-[#A6A3F8] transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="font-bold">{benefit.title}</h3>
                 <p className="text-sm text-muted-foreground">
                   {benefit.description}
