@@ -13,7 +13,7 @@ export const HowItWorksSection = () => {
         <div className="mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-3 w-full place-items-center">
           <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
             <CardContent className="p-6 space-y-2">
-              <div className="text-4xl font-bold text-primary">1</div>
+              <div className="text-4xl font-bold text-[#A6A3F8]">1</div>
               <h3 className="font-bold">Set Up Your Profile</h3>
               <p className="text-sm text-muted-foreground">
                 Tell us about <strong>you</strong>. Regardss customizes its responses to fit your <strong>unique style</strong> and professional needs.
@@ -22,7 +22,7 @@ export const HowItWorksSection = () => {
           </Card>
           <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
             <CardContent className="p-6 space-y-2">
-              <div className="text-4xl font-bold text-primary">2</div>
+              <div className="text-4xl font-bold text-[#A6A3F8]">2</div>
               <h3 className="font-bold">Draft or Reply</h3>
               <p className="text-sm text-muted-foreground">
                 Write a few <strong>bullet points</strong> or paste an email you want to reply to. Keep it <strong>simple</strong>—just the key ideas.
@@ -31,7 +31,7 @@ export const HowItWorksSection = () => {
           </Card>
           <Card className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm max-w-[20rem] w-full">
             <CardContent className="p-6 space-y-2">
-              <div className="text-4xl font-bold text-primary">3</div>
+              <div className="text-4xl font-bold text-[#A6A3F8]">3</div>
               <h3 className="font-bold">Get Your Email</h3>
               <p className="text-sm text-muted-foreground">
                 Click '<strong>Generate</strong>' and let Regardss transform your input into a clear, professional email that's <strong>ready to send</strong>.
