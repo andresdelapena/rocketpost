@@ -17,7 +17,7 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
 
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="flex flex-col text-center space-y-6">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-gray-900">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-typography">
             How Much Time Are You Wasting Writing Emails?
           </h1>
           <p className="text-xl text-gray-600 mx-auto max-w-[700px]">
