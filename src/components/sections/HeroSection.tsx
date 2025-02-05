@@ -10,17 +10,18 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
   return (
     <section id="home" className="container max-w-[1536px] mx-auto px-4 py-24 md:py-32 animate-fade-in">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[#FEFEFF]/90"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMTY2LCAxNjMsIDI0OCwgMC4zKSIgc3Ryb2tlLXdpZHRoPSIxIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6Ii8+PC9nPjwvc3ZnPg==')] opacity-40"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#A6A3F8]/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(109.6deg,rgba(223,234,247,0.9)_11.2%,rgba(244,248,252,0.9)_91.1%)]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMTQ3LCAxOTcsIDI1MywgMC4zKSIgc3Ryb2tlLXdpZHRoPSIxIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6Ii8+PC9nPjwvc3ZnPg==')] opacity-40"></div>
+        {/* Removed the white gradient div that was causing the fade to white */}
+        <div className="absolute inset-0 bg-radial-gradient"></div>
       </div>
 
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="flex flex-col text-center space-y-6">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-[#1F1F1F]">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-gray-900">
             How Much Time Are You Wasting Writing Emails?
           </h1>
-          <p className="text-xl text-[#1F1F1F]/80 mx-auto max-w-[700px]">
+          <p className="text-xl text-gray-600 mx-auto max-w-[700px]">
             Stop spending hours drafting and editing. Regardss writes emails in your voice—faster, smarter, and 100% authentic
           </p>
         </div>
@@ -29,7 +30,7 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
           <Button 
             size="lg" 
             onClick={onWaitlistClick}
-            className="bg-[#FF6978] hover:bg-[#FF6978]/90 text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
+            className="bg-[#2563EB] hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
           >
             Join the Waitlist <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -57,14 +58,14 @@ export function HeroSection({ scrollToSection, onWaitlistClick }: HeroSectionPro
                 className="w-12 h-12 rounded-full border-2 border-white object-cover"
               />
             </div>
-            <p className="text-sm text-[#1A1F71] font-medium">
+            <p className="text-sm text-blue-600 font-medium">
               Join 25+ founders waiting for the best AI email assistant!
             </p>
           </div>
 
           <div className="mt-8 flex justify-center">
             <ChevronDown 
-              className="w-6 h-6 text-[#A6A3F8] hover:text-[#1A1F71] transition-colors cursor-pointer" 
+              className="w-6 h-6 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer" 
               onClick={() => scrollToSection('benefits')}
             />
           </div>
