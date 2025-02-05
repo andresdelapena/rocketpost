@@ -11,7 +11,7 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-[linear-gradient(109.6deg,rgba(223,234,247,0.8)_11.2%,rgba(244,248,252,0.8)_91.1%)] backdrop-blur-md shadow-sm">
+    <header className="fixed top-0 z-50 w-full bg-[linear-gradient(109.6deg,rgba(245,247,250,0.8)_11.2%,rgba(245,247,250,0.8)_91.1%)] backdrop-blur-md shadow-sm">
       <div className="container flex h-16 items-center">
         <Link to="/" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-xl bg-[#FF6978] flex items-center justify-center">
