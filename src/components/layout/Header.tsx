@@ -15,7 +15,7 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
       <div className="container flex h-16 items-center">
         <Link to="/" className="flex items-center gap-2">
           <img 
-            src="/lovable-uploads/9cc08903-7bf3-47c2-b3b0-ffc8d652ddd5.png" 
+            src="/lovable-uploads/bf1c518b-8bc6-4249-b45a-526d0c4deb32.png" 
             alt="RocketPost Logo" 
             className="h-8"
           />
