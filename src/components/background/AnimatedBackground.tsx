@@ -45,7 +45,7 @@ function FloatingPaths({ position }: { position: number }) {
 
 export function AnimatedBackground() {
   return (
-    <div className="absolute inset-0 -z-10">
+    <div className="fixed inset-0 -z-10">
       <FloatingPaths position={1} />
       <FloatingPaths position={-1} />
     </div>
