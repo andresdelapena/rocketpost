@@ -29,14 +29,14 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
               How It Works
             </button>
             <Button onClick={onWaitlistClick} className="md:hidden w-full max-w-[15.625rem] bg-[#FF6978] hover:bg-[#ff8591] text-white">
-              Join Waitlist
+              Join Waitlist - Get 50% Off
             </Button>
           </nav>
           <Button 
             onClick={onWaitlistClick} 
             className="hidden md:inline-flex bg-[#FF6978] hover:bg-[#ff8591] text-white rounded-full px-6"
           >
-            Join Waitlist
+            Join Waitlist - Get 50% Off
           </Button>
           <Button 
             variant="outline" 
