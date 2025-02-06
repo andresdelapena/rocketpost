@@ -13,7 +13,7 @@ export function SolutionSection() {
       ]
     },
     {
-      title: "3X your reach and revenue:",
+      title: "3X Your Audience and Revenue",
       points: [
         "Expand beyond Twitter automatically",
         "Reach new audiences who prefer video",
