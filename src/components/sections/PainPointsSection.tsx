@@ -1,30 +1,87 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { XCircle } from "lucide-react";
+import { LineChart, Line, ResponsiveContainer } from 'recharts';
+
+const data = [
+  { value: 10 },
+  { value: 15 },
+  { value: 25 },
+  { value: 20 },
+  { value: 30 },
+  { value: 25 },
+  { value: 35 },
+];
 
 export function PainPointsSection() {
-  const painPoints = [
-    "Manual editing takes hours",
-    "Your brand voice gets lost in translation",
-    "Each platform needs different formats",
-    "Your content stays trapped on Twitter"
+  const features = [
+    {
+      title: "Templates",
+      subtitle: "High quality, expert-made templates",
+      description: "Get started with popular startup metrics in minutes.",
+      chart: true
+    },
+    {
+      title: "Connectors",
+      subtitle: "We connect to over 150+ apps",
+      description: "If it has an API, we'll build you a customer connector in 48 hours for free or your money back.",
+      logos: true
+    },
+    {
+      title: "Beautiful dashboards",
+      subtitle: "Design stunning dashboards.",
+      description: "Filters for your team to explore easily. Tons of visualization options. Color themes that make your charts pop.",
+      chart: true
+    },
+    {
+      title: "Spreadsheets on steroids",
+      subtitle: "No SQL? No problem.",
+      description: "Familiar Excel shortcuts. Slice and dice with powerful pivot tables. Formulas that translate to SQL. Reusable models.",
+      table: true
+    }
   ];
 
   return (
-    <section className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
-      <div className="flex flex-col items-center text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-[#1A1F71] via-[#3d4190] to-[#6064af] bg-clip-text text-transparent">
-          You know your tweets should be videos, but:
-        </h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 w-full max-w-4xl">
-          {painPoints.map((point, index) => (
-            <Card key={index} className="border border-blue-200/60 hover:border-blue-300/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md bg-white/50 backdrop-blur-sm">
-              <CardContent className="p-6 flex items-start gap-4">
-                <XCircle className="h-6 w-6 text-[#A6A3F8] flex-shrink-0" />
-                <p className="text-lg text-gray-700">{point}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+    <section className="container max-w-7xl mx-auto px-4 py-16">
+      <div className="grid gap-6 md:grid-cols-2">
+        {features.map((feature, index) => (
+          <Card key={index} className="overflow-hidden border border-gray-100 hover:border-gray-200 transition-all duration-300 bg-white">
+            <CardContent className="p-6 space-y-4">
+              <div className="h-48 w-full bg-gray-50 rounded-lg mb-6">
+                {feature.chart && (
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={data}>
+                      <Line 
+                        type="monotone" 
+                        dataKey="value" 
+                        stroke="#4F46E5" 
+                        strokeWidth={2}
+                        dot={false}
+                      />
+                    </LineChart>
+                  </ResponsiveContainer>
+                )}
+                {feature.logos && (
+                  <div className="grid grid-cols-4 gap-4 p-4">
+                    {Array(8).fill(0).map((_, i) => (
+                      <div key={i} className="aspect-square rounded-full bg-gray-100" />
+                    ))}
+                  </div>
+                )}
+                {feature.table && (
+                  <div className="p-4 space-y-2">
+                    {Array(4).fill(0).map((_, i) => (
+                      <div key={i} className="h-6 bg-gray-100 rounded" />
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-sm font-medium text-blue-600">{feature.title}</h3>
+                <h4 className="text-xl font-semibold text-gray-900">{feature.subtitle}</h4>
+                <p className="text-gray-500 text-sm">{feature.description}</p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );
