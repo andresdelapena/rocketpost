@@ -17,7 +17,7 @@ export const FinalCTASection = ({ onWaitlistClick }: FinalCTASectionProps) => {
             onClick={onWaitlistClick}
             className="bg-[#FF6978] hover:bg-[#ff8591] text-white"
           >
-            Get Early Access
+            Join Waitlist - Get 50% Off
           </Button>
           <p className="text-sm text-muted-foreground">
             Limited spots available for beta launch
