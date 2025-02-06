@@ -7,9 +7,8 @@ interface HeroSectionProps {
 
 export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
   return (
-    <section className="container max-w-[1536px] mx-auto px-4 py-24 md:py-32 relative">
-      <div className="absolute inset-0 bg-[#FEFEFF] bg-opacity-50"></div>
-      <div className="relative z-10 max-w-4xl mx-auto space-y-12">
+    <section className="container max-w-[1536px] mx-auto px-4 py-24 md:py-32 animate-fade-in">
+      <div className="max-w-4xl mx-auto space-y-12">
         <div className="flex flex-col text-center space-y-6">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-typography">
             Turn Tweets into Videos in 3 Clicks
