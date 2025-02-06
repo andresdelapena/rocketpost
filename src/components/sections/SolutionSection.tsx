@@ -4,7 +4,7 @@ import { CheckCircle } from "lucide-react";
 export function SolutionSection() {
   const solutions = [
     {
-      title: "X to IG/Video handles it all:",
+      title: "RocketPost handles it all:",
       points: [
         "Select tweet → Choose style → Post",
         "AI matches your brand voice",
