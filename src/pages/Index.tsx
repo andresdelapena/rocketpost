@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
 import { Header } from "@/components/layout/Header";
@@ -7,6 +8,7 @@ import { PainPointsSection } from "@/components/sections/PainPointsSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
+import { AnimatedBackground } from "@/components/background/AnimatedBackground";
 
 export default function Index() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -22,7 +24,7 @@ export default function Index() {
 
   return (
     <div className="relative flex min-h-screen flex-col text-slate-900">
-      <div className="fixed inset-0 -z-10 bg-[#F5F7FA]" />
+      <AnimatedBackground />
 
       <Header scrollToSection={scrollToSection} onWaitlistClick={handleWaitlistClick} />
       
