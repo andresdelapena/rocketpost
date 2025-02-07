@@ -24,7 +24,8 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
     <section className="container px-4 md:px-6 pt-24 pb-12">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">
-          From Tweets to All Social Media - In One Click
+          From Tweets to <span className="text-[#8B5CF6]">All Social Media</span><br />
+          In One Click
         </h1>
         <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
           Turn your tweets into engaging content for every platform. Save hours of work and reach more people.
