@@ -31,7 +31,7 @@ export default function Index() {
       <main className="flex-1">
         <HeroSection onWaitlistClick={handleWaitlistClick} />
         <PainPointsSection />
-        <SolutionSection />
+        <SolutionSection onWaitlistClick={handleWaitlistClick} />
         <PricingSection />
         <FinalCTASection onWaitlistClick={handleWaitlistClick} />
       </main>

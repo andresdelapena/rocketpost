@@ -1,4 +1,5 @@
-import { ArrowRight } from 'lucide-react';
+
+import { ArrowRight, Flame } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
@@ -11,10 +12,10 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="flex flex-col text-center space-y-6">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-typography">
-            Turn Tweets into Videos in 3 Clicks
+            Turn Tweets Into Stunning Content in 3 Clicks
           </h1>
           <p className="text-xl text-gray-600 mx-auto max-w-[700px]">
-            Stop spending hours editing. Our AI converts your best tweets into platform-ready videos for Instagram, TikTok, and YouTube Shorts.
+            Stop spending hours editing. Our AI converts your best tweets into platform-ready images, carousels, and videos for Instagram, LinkedIn, TikTok, and more.
           </p>
         </div>
         
@@ -22,9 +23,9 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           <Button 
             size="lg" 
             onClick={onWaitlistClick}
-            className="bg-[#FF6978] hover:bg-[#ff8591] text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
+            className="bg-[#FF6978] hover:bg-[#ff8591] text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 flex items-center gap-2"
           >
-            Join Waitlist - Get 50% Off Launch Price <ArrowRight className="ml-2 h-5 w-5" />
+            <Flame className="w-5 h-5" /> Join Waitlist - Get 50% Off Launch Price <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>
