@@ -21,7 +21,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
   }, []);
 
   return (
-    <section className="container px-4 md:px-6 py-12">
+    <section className="container px-4 md:px-6 pt-24 pb-12">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
           From Tweets to All Social Media - In One Click
