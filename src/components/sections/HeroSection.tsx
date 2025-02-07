@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -61,39 +60,38 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           </div>
 
           {/* Animated Arrows */}
-          <div className="relative h-24">
-            {[1, 2, 3].map((index) => (
+          <div className="relative h-32">
+            {[-1, 0, 1].map((index) => (
               <motion.svg
                 key={index}
-                width="120"
-                height="120"
-                viewBox="0 0 120 120"
+                width="200"
+                height="150"
+                viewBox="0 0 200 150"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute left-1/2"
+                className="absolute left-1/2 -translate-x-1/2"
                 style={{
-                  transform: `translateX(${(index - 2) * 160}px) rotate(${(index - 2) * 20}deg)`,
-                  transformOrigin: 'top',
-                }}
-                initial={{ opacity: 0, pathLength: 0 }}
-                animate={{ 
-                  opacity: 1,
-                  pathLength: 1,
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut",
+                  transform: `translateX(calc(-50% + ${index * 300}px))`,
                 }}
               >
                 <motion.path
-                  d="M60 0 L60 80 L80 60 M60 80 L40 60"
+                  d={`M100 0 L${100 + (index * 100)} 130 L${120 + (index * 100)} 110 M${100 + (index * 100)} 130 L${80 + (index * 100)} 110`}
                   stroke="#8B5CF6"
                   strokeWidth="2"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ 
+                    pathLength: 1,
+                    opacity: [0, 1, 1, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    times: [0, 0.3, 0.7, 1]
+                  }}
                 />
               </motion.svg>
             ))}
