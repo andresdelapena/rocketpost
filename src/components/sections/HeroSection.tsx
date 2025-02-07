@@ -50,7 +50,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                 </Avatar>
                 <div className="flex-1 space-y-2">
                   <div className="flex items-center space-x-2">
-                    <div className="font-semibold">John Smith</div>
+                    <div className="font-semibold">Andy de la Pena</div>
                     <Twitter className="h-5 w-5 text-[#1DA1F2]" />
                   </div>
                   <p className="text-sm text-gray-500">
