@@ -41,7 +41,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="grid gap-12 relative"
+          className="grid gap-12"
         >
           <div className="flex justify-center">
             <Card className="p-6 max-w-md w-full">
@@ -66,48 +66,6 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                 </div>
               </div>
             </Card>
-          </div>
-
-          {/* Animated Arrows */}
-          <div className="absolute left-1/2 bottom-[300px] w-0 h-0">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="relative"
-            >
-              {/* Left Arrow */}
-              <motion.div
-                initial={{ width: 0, rotate: -35 }}
-                animate={{ width: "250px" }}
-                transition={{ duration: 0.8, delay: 0.7 }}
-                className="absolute h-[2px] bg-[#FF6978] origin-left"
-                style={{ transform: "rotate(-35deg)" }}
-              >
-                <div className="absolute right-0 w-3 h-3 bg-[#FF6978] rotate-45 -translate-y-1/2" />
-              </motion.div>
-
-              {/* Center Arrow */}
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: "200px" }}
-                transition={{ duration: 0.8, delay: 0.7 }}
-                className="absolute w-[2px] bg-[#FF6978] left-1/2 -translate-x-1/2"
-              >
-                <div className="absolute bottom-0 w-3 h-3 bg-[#FF6978] rotate-45 -translate-x-1/2" />
-              </motion.div>
-
-              {/* Right Arrow */}
-              <motion.div
-                initial={{ width: 0, rotate: 35 }}
-                animate={{ width: "250px" }}
-                transition={{ duration: 0.8, delay: 0.7 }}
-                className="absolute h-[2px] bg-[#FF6978] origin-left"
-                style={{ transform: "rotate(35deg)" }}
-              >
-                <div className="absolute right-0 w-3 h-3 bg-[#FF6978] rotate-45 -translate-y-1/2" />
-              </motion.div>
-            </motion.div>
           </div>
 
           <div className="space-y-6">
