@@ -1,6 +1,8 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
 import { ArrowRight, Dot, Flame, Video, Twitter } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
@@ -11,6 +13,13 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
+  const [progress, setProgress] = React.useState(33);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => setProgress(66), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="container px-4 md:px-6 pt-32 pb-20">
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
@@ -57,44 +66,6 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                 </div>
               </div>
             </Card>
-          </div>
-
-          {/* Animated Arrows */}
-          <div className="relative h-32">
-            {[-1, 0, 1].map((index) => (
-              <motion.svg
-                key={index}
-                width="200"
-                height="150"
-                viewBox="0 0 200 150"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute left-1/2 -translate-x-1/2"
-                style={{
-                  transform: `translateX(calc(-50% + ${index * 300}px))`,
-                }}
-              >
-                <motion.path
-                  d={`M100 0 L${100 + (index * 100)} 130 L${120 + (index * 100)} 110 M${100 + (index * 100)} 130 L${80 + (index * 100)} 110`}
-                  stroke="#8B5CF6"
-                  strokeWidth="2"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ 
-                    pathLength: 1,
-                    opacity: [0, 1, 1, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    times: [0, 0.3, 0.7, 1]
-                  }}
-                />
-              </motion.svg>
-            ))}
           </div>
 
           <div className="space-y-6">
