@@ -164,7 +164,7 @@ const ContentRepurposingVisual: React.FC = () => {
 
 export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
   return (
-    <section className="container max-w-[1536px] mx-auto px-4 py-24 md:py-32 animate-fade-in">
+    <section className="container max-w-[1536px] mx-auto px-4 py-24 md:py-32">
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="flex flex-col text-center space-y-6">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl text-typography">
