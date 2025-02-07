@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -18,18 +19,6 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
     const timer = setTimeout(() => setProgress(66), 500);
     return () => clearTimeout(timer);
   }, []);
-
-  const drawPath = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: {
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        pathLength: { type: "spring", duration: 1.5, bounce: 0 },
-        opacity: { duration: 0.01 }
-      }
-    }
-  };
 
   return (
     <section className="container px-4 md:px-6 pt-32 pb-20">
@@ -79,89 +68,57 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
             </Card>
           </div>
 
-          <div className="relative">
-            <svg className="absolute w-full h-32 top-[-2rem]" viewBox="0 0 800 100">
-              <motion.path
-                d="M 400,0 C 400,0 300,50 200,50"
-                stroke="#8B5CF6"
-                strokeWidth="2"
-                fill="none"
-                variants={drawPath}
-                initial="hidden"
-                animate="visible"
-              />
-              <motion.path
-                d="M 400,0 C 400,0 400,50 400,50"
-                stroke="#8B5CF6"
-                strokeWidth="2"
-                fill="none"
-                variants={drawPath}
-                initial="hidden"
-                animate="visible"
-              />
-              <motion.path
-                d="M 400,0 C 400,0 500,50 600,50"
-                stroke="#8B5CF6"
-                strokeWidth="2"
-                fill="none"
-                variants={drawPath}
-                initial="hidden"
-                animate="visible"
-              />
-            </svg>
-
-            <div className="space-y-6">
-              <div className="flex items-center justify-between">
-                <div className="space-y-2">
-                  <div className="text-sm font-medium">Converting to all platforms</div>
-                  <div className="text-sm text-gray-500">Step {progress === 33 ? "1" : "2"} of 3</div>
+          <div className="space-y-6">
+            <div className="flex items-center justify-between">
+              <div className="space-y-2">
+                <div className="text-sm font-medium">Converting to all platforms</div>
+                <div className="text-sm text-gray-500">Step {progress === 33 ? "1" : "2"} of 3</div>
+              </div>
+              <Progress value={progress} className="w-[60%]" />
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              <Card className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-2">
+                    <Video className="h-4 w-4" />
+                    <div className="font-semibold">TikTok</div>
+                  </div>
+                  <div className="aspect-video bg-gray-100 rounded-lg" />
+                  <div className="flex space-x-2">
+                    <Dot />
+                    <Dot className="text-gray-300" />
+                    <Dot className="text-gray-300" />
+                  </div>
                 </div>
-                <Progress value={progress} className="w-[60%]" />
-              </div>
-              <div className="grid gap-8 md:grid-cols-3">
-                <Card className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
-                      <Video className="h-4 w-4" />
-                      <div className="font-semibold">TikTok</div>
-                    </div>
-                    <div className="aspect-video bg-gray-100 rounded-lg" />
-                    <div className="flex space-x-2">
-                      <Dot />
-                      <Dot className="text-gray-300" />
-                      <Dot className="text-gray-300" />
-                    </div>
+              </Card>
+              <Card className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-2">
+                    <Flame className="h-4 w-4" />
+                    <div className="font-semibold">Instagram</div>
                   </div>
-                </Card>
-                <Card className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
-                      <Flame className="h-4 w-4" />
-                      <div className="font-semibold">Instagram</div>
-                    </div>
-                    <div className="aspect-square bg-gray-100 rounded-lg" />
-                    <div className="flex space-x-2">
-                      <Dot />
-                      <Dot className="text-gray-300" />
-                      <Dot className="text-gray-300" />
-                    </div>
+                  <div className="aspect-square bg-gray-100 rounded-lg" />
+                  <div className="flex space-x-2">
+                    <Dot />
+                    <Dot className="text-gray-300" />
+                    <Dot className="text-gray-300" />
                   </div>
-                </Card>
-                <Card className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
-                      <Video className="h-4 w-4" />
-                      <div className="font-semibold">LinkedIn</div>
-                    </div>
-                    <div className="aspect-video bg-gray-100 rounded-lg" />
-                    <div className="flex space-x-2">
-                      <Dot />
-                      <Dot className="text-gray-300" />
-                      <Dot className="text-gray-300" />
-                    </div>
+                </div>
+              </Card>
+              <Card className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-2">
+                    <Video className="h-4 w-4" />
+                    <div className="font-semibold">LinkedIn</div>
                   </div>
-                </Card>
-              </div>
+                  <div className="aspect-video bg-gray-100 rounded-lg" />
+                  <div className="flex space-x-2">
+                    <Dot />
+                    <Dot className="text-gray-300" />
+                    <Dot className="text-gray-300" />
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </motion.div>
