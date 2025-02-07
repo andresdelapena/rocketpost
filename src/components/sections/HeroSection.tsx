@@ -69,13 +69,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           </div>
 
           <div className="space-y-6">
-            <div className="flex items-center justify-between">
-              <div className="space-y-2">
-                <div className="text-sm font-medium">Converting to all platforms</div>
-                <div className="text-sm text-gray-500">Step {progress === 33 ? "1" : "2"} of 3</div>
-              </div>
-              <Progress value={progress} className="w-[60%]" />
-            </div>
+            <div className="text-sm font-medium">Converting to all platforms</div>
             <div className="grid gap-8 md:grid-cols-3">
               <Card className="p-6">
                 <div className="space-y-4">
