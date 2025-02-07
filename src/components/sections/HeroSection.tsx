@@ -20,19 +20,6 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
     return () => clearTimeout(timer);
   }, []);
 
-  const Arrow = ({ x1, y1, x2, y2 }: { x1: number; y1: number; x2: number; y2: number }) => (
-    <motion.path
-      initial={{ pathLength: 0 }}
-      animate={{ pathLength: 1 }}
-      transition={{ duration: 1, repeat: Infinity, repeatDelay: 0.5 }}
-      d={`M ${x1} ${y1} Q ${(x1 + x2) / 2} ${(y1 + y2) / 2 - 50} ${x2} ${y2}`}
-      stroke="#8B5CF6"
-      strokeWidth="2"
-      fill="none"
-      strokeDasharray="5,5"
-    />
-  );
-
   return (
     <section className="container px-4 md:px-6 pt-32 pb-20">
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
@@ -56,7 +43,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           transition={{ duration: 0.5 }}
           className="grid gap-12"
         >
-          <div className="flex justify-center relative">
+          <div className="flex justify-center">
             <Card className="p-6 max-w-md w-full">
               <div className="flex items-start space-x-4">
                 <Avatar className="h-10 w-10 border">
@@ -79,12 +66,6 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                 </div>
               </div>
             </Card>
-            
-            <svg className="absolute w-full h-[300px] top-[100%] left-0 pointer-events-none">
-              <Arrow x1={400} y1={0} x2={200} y2={250} />
-              <Arrow x1={400} y1={0} x2={400} y2={250} />
-              <Arrow x1={400} y1={0} x2={600} y2={250} />
-            </svg>
           </div>
 
           <div className="space-y-6">
