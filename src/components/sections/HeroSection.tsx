@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -23,7 +22,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
   return (
     <section className="container px-4 md:px-6 pt-24 pb-12">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">
+        <h1 className="text-5xl font-bold tracking-tighter sm:text-7xl xl:text-8xl/[1.2] leading-[1.4]">
           From Tweets to <span className="text-[#8B5CF6]">All Social Media</span><br />
           In One Click
         </h1>
