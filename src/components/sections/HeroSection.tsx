@@ -61,42 +61,42 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           </div>
 
           {/* Animated Arrows */}
-          <div className="flex justify-center space-x-8 -mt-4 mb-4">
-            <motion.div
-              animate={{
-                x: [0, 10, 0],
-                opacity: [0.5, 1, 0.5],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="flex space-x-8"
-            >
-              {[1, 2, 3].map((index) => (
-                <motion.svg
-                  key={index}
-                  width="40"
-                  height="80"
-                  viewBox="0 0 40 80"
+          <div className="relative h-24">
+            {[1, 2, 3].map((index) => (
+              <motion.svg
+                key={index}
+                width="120"
+                height="120"
+                viewBox="0 0 120 120"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute left-1/2"
+                style={{
+                  transform: `translateX(${(index - 2) * 160}px) rotate(${(index - 2) * 20}deg)`,
+                  transformOrigin: 'top',
+                }}
+                initial={{ opacity: 0, pathLength: 0 }}
+                animate={{ 
+                  opacity: 1,
+                  pathLength: 1,
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+                }}
+              >
+                <motion.path
+                  d="M60 0 L60 80 L80 60 M60 80 L40 60"
+                  stroke="#8B5CF6"
+                  strokeWidth="2"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: index * 0.2 }}
-                >
-                  <path
-                    d="M20 0 L20 60 L35 45 L20 60 L5 45"
-                    stroke="#8B5CF6"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </motion.svg>
-              ))}
-            </motion.div>
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </motion.svg>
+            ))}
           </div>
 
           <div className="space-y-6">
