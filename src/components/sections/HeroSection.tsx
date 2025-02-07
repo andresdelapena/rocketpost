@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { ArrowRight, Dot, Flame, Video } from "lucide-react";
+import { ArrowRight, Dot, Flame, Video, Twitter } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
 import { motion } from "framer-motion";
@@ -42,29 +42,35 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           transition={{ duration: 0.5 }}
           className="grid gap-8"
         >
-          <Card className="p-6">
-            <div className="flex items-start space-x-4">
-              <Avatar className="h-12 w-12 border">
-                <AvatarImage alt="Avatar" src="/placeholder.svg" />
-              </Avatar>
-              <div className="space-y-2">
-                <div className="font-semibold">Original Tweet</div>
-                <p className="text-sm text-gray-500">
-                  Here are my top 5 productivity tips that helped me grow my startup from 0 to 100k MRR! 🚀
-                  <br />
-                  1. Wake up at 5am
-                  <br />
-                  2. Cold showers
-                  <br />
-                  3. Meditate for 1hr
-                  <br />
-                  4. Read 2 books/day
-                  <br />
-                  5. Network 24/7
-                </p>
+          <div className="flex justify-center">
+            <Card className="p-4 max-w-md w-full">
+              <div className="flex items-start space-x-3">
+                <Avatar className="h-10 w-10 border">
+                  <AvatarImage alt="Profile picture" src="/lovable-uploads/9ccd389b-f7a9-4ed4-b5b6-0d17585b99a5.png" />
+                </Avatar>
+                <div className="flex-1 space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <div className="font-semibold">John Smith</div>
+                    <Twitter className="h-5 w-5 text-[#1DA1F2]" />
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    Here are my top 5 productivity tips that helped me grow my startup from 0 to 100k MRR! 🚀
+                    <br />
+                    1. Wake up at 5am
+                    <br />
+                    2. Cold showers
+                    <br />
+                    3. Meditate for 1hr
+                    <br />
+                    4. Read 2 books/day
+                    <br />
+                    5. Network 24/7
+                  </p>
+                </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+          </div>
+
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div className="space-y-1">
