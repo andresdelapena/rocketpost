@@ -23,7 +23,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
   return (
     <section className="container px-4 md:px-6 pt-24 pb-12">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">
           From Tweets to All Social Media - In One Click
         </h1>
         <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
@@ -31,7 +31,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
         </p>
         <div className="space-x-4">
           <Button onClick={onWaitlistClick} size="lg" className="bg-[#FF6978] hover:bg-[#ff8591] text-white">
-            Join Waitlist <ArrowRight className="ml-2 h-4 w-4" />
+            Join the Waitlist Now - Get 50% Off <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
       </div>
