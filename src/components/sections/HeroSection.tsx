@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -20,8 +21,8 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
   }, []);
 
   return (
-    <section className="container px-4 md:px-6 pt-24 pb-12">
-      <div className="flex flex-col items-center justify-center space-y-4 text-center">
+    <section className="container px-4 md:px-6 pt-32 pb-20">
+      <div className="flex flex-col items-center justify-center space-y-8 text-center">
         <h1 className="text-5xl font-bold tracking-tighter sm:text-7xl xl:text-8xl/[1.2] leading-[1.4]">
           From Tweets to <span className="text-[#8B5CF6]">All Social Media</span><br />
           In One Click
@@ -29,26 +30,26 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
         <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
           Turn your tweets into engaging content for every platform. Save hours of work and reach more people.
         </p>
-        <div className="space-x-4">
+        <div className="space-x-4 pt-4">
           <Button onClick={onWaitlistClick} size="lg" className="bg-[#FF6978] hover:bg-[#ff8591] text-white">
             Join the Waitlist Now - Get 50% Off <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
       </div>
-      <div className="mx-auto max-w-5xl py-12">
+      <div className="mx-auto max-w-5xl py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="grid gap-8"
+          className="grid gap-12"
         >
           <div className="flex justify-center">
-            <Card className="p-4 max-w-md w-full">
-              <div className="flex items-start space-x-3">
+            <Card className="p-6 max-w-md w-full">
+              <div className="flex items-start space-x-4">
                 <Avatar className="h-10 w-10 border">
                   <AvatarImage alt="Profile picture" src="/lovable-uploads/9ccd389b-f7a9-4ed4-b5b6-0d17585b99a5.png" />
                 </Avatar>
-                <div className="flex-1 space-y-2">
+                <div className="flex-1 space-y-3">
                   <div className="flex items-center space-x-2">
                     <div className="font-semibold">Andy de la Pena</div>
                     <Twitter className="h-5 w-5 text-[#1DA1F2]" />
@@ -67,23 +68,23 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
             </Card>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="flex items-center justify-between">
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <div className="text-sm font-medium">Converting to all platforms</div>
                 <div className="text-sm text-gray-500">Step {progress === 33 ? "1" : "2"} of 3</div>
               </div>
               <Progress value={progress} className="w-[60%]" />
             </div>
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-3">
               <Card className="p-6">
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <div className="flex items-center space-x-2">
                     <Video className="h-4 w-4" />
                     <div className="font-semibold">TikTok</div>
                   </div>
                   <div className="aspect-video bg-gray-100 rounded-lg" />
-                  <div className="flex space-x-1">
+                  <div className="flex space-x-2">
                     <Dot />
                     <Dot className="text-gray-300" />
                     <Dot className="text-gray-300" />
@@ -91,13 +92,13 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                 </div>
               </Card>
               <Card className="p-6">
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <div className="flex items-center space-x-2">
                     <Flame className="h-4 w-4" />
                     <div className="font-semibold">Instagram</div>
                   </div>
                   <div className="aspect-square bg-gray-100 rounded-lg" />
-                  <div className="flex space-x-1">
+                  <div className="flex space-x-2">
                     <Dot />
                     <Dot className="text-gray-300" />
                     <Dot className="text-gray-300" />
@@ -105,13 +106,13 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                 </div>
               </Card>
               <Card className="p-6">
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <div className="flex items-center space-x-2">
                     <Video className="h-4 w-4" />
                     <div className="font-semibold">LinkedIn</div>
                   </div>
                   <div className="aspect-video bg-gray-100 rounded-lg" />
-                  <div className="flex space-x-1">
+                  <div className="flex space-x-2">
                     <Dot />
                     <Dot className="text-gray-300" />
                     <Dot className="text-gray-300" />
