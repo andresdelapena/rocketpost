@@ -1,9 +1,9 @@
 
+import React, { useState, useEffect } from "react";
 import { ArrowRight, Flame, Heart, MessageCircle, Share2, Dot, Twitter, Instagram, Linkedin, Video, Image, FileText } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
 
 interface HeroSectionProps {
   onWaitlistClick: () => void;
@@ -42,11 +42,10 @@ const PlatformCard = ({ platform }: {
   );
 };
 
-const ContentRepurposingVisual = () => {
+const ContentRepurposingVisual: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(0);
 
-  // Auto-advance steps
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setCurrentStep((prev) => (prev + 1) % 3);
     }, 3000);
