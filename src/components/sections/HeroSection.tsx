@@ -2,7 +2,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import { ArrowRight, Dot, Flame, Video, Twitter } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
@@ -13,13 +12,6 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
-  const [progress, setProgress] = React.useState(33);
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section className="container px-4 md:px-6 pt-32 pb-20">
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
@@ -66,6 +58,45 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                 </div>
               </div>
             </Card>
+          </div>
+
+          {/* Animated Arrows */}
+          <div className="flex justify-center space-x-8 -mt-4 mb-4">
+            <motion.div
+              animate={{
+                x: [0, 10, 0],
+                opacity: [0.5, 1, 0.5],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="flex space-x-8"
+            >
+              {[1, 2, 3].map((index) => (
+                <motion.svg
+                  key={index}
+                  width="40"
+                  height="80"
+                  viewBox="0 0 40 80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: index * 0.2 }}
+                >
+                  <path
+                    d="M20 0 L20 60 L35 45 L20 60 L5 45"
+                    stroke="#8B5CF6"
+                    strokeWidth="2"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </motion.svg>
+              ))}
+            </motion.div>
           </div>
 
           <div className="space-y-6">
