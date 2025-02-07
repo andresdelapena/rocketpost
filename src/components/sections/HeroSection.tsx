@@ -1,11 +1,43 @@
 
-import { ArrowRight, Flame, Heart, MessageCircle, Share2, Dot } from 'lucide-react';
+import { ArrowRight, Flame, Heart, MessageCircle, Share2, Dot, Twitter, Instagram, Linkedin, Video, Image, FileText } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import { motion } from "framer-motion";
 
 interface HeroSectionProps {
   onWaitlistClick: () => void;
 }
+
+const PlatformCard = ({ platform }: { 
+  platform: {
+    name: string;
+    icon: React.ReactNode;
+    color: string;
+    mediaType: string;
+    mediaIcon: React.ReactNode;
+  }
+}) => {
+  return (
+    <div className={`bg-gradient-to-br ${platform.color} p-1 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105`}>
+      <div className="bg-white p-4 rounded-lg space-y-3">
+        <div className="h-40 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg flex items-center justify-center relative">
+          <p className="text-lg font-semibold text-center px-4">5 Tips for Building Your Startup</p>
+          <div className="absolute bottom-4 flex space-x-1">
+            <Dot className="w-2 h-2 text-gray-800 fill-current" />
+            <Dot className="w-2 h-2 text-gray-400" />
+            <Dot className="w-2 h-2 text-gray-400" />
+            <Dot className="w-2 h-2 text-gray-400" />
+            <Dot className="w-2 h-2 text-gray-400" />
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className={`w-8 h-8 rounded-full bg-gradient-to-tr ${platform.color}`}></div>
+          <span className="font-semibold">{platform.name}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
   return (
@@ -83,62 +115,35 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
             </div>
           </div>
 
-          {/* Platform Previews */}
+          {/* Platform Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {/* Instagram Preview */}
-            <div className="bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] p-1 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105">
-              <div className="bg-white p-4 rounded-lg space-y-3">
-                <div className="h-40 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg flex items-center justify-center relative">
-                  <p className="text-lg font-semibold text-center px-4">5 Tips for Building Your Startup</p>
-                  <div className="absolute bottom-4 flex space-x-1">
-                    <Dot className="w-2 h-2 text-gray-800 fill-current" />
-                    <Dot className="w-2 h-2 text-gray-400" />
-                    <Dot className="w-2 h-2 text-gray-400" />
-                    <Dot className="w-2 h-2 text-gray-400" />
-                    <Dot className="w-2 h-2 text-gray-400" />
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#833AB4] to-[#FD1D1D]"></div>
-                  <span className="font-semibold">Instagram Carousel</span>
-                </div>
-              </div>
-            </div>
-
-            {/* TikTok Preview */}
-            <div className="bg-gradient-to-br from-[#00f2ea] to-[#ff0050] p-1 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105">
-              <div className="bg-black p-4 rounded-lg space-y-3">
-                <div className="h-40 bg-gray-900 rounded-lg flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"></div>
-                  <p className="text-white text-lg font-bold text-center px-4 z-10">Building Your Startup</p>
-                  <div className="absolute right-2 bottom-2 flex flex-col space-y-4">
-                    <Heart className="w-6 h-6 text-white" />
-                    <MessageCircle className="w-6 h-6 text-white" />
-                    <Share2 className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#00f2ea] to-[#ff0050]"></div>
-                  <span className="font-semibold text-white">TikTok Video</span>
-                </div>
-              </div>
-            </div>
-
-            {/* LinkedIn Preview */}
-            <div className="bg-gradient-to-br from-[#0077B5] to-[#00a0dc] p-1 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105">
-              <div className="bg-white p-4 rounded-lg space-y-3">
-                <div className="h-40 bg-blue-50 rounded-lg flex items-center justify-center p-4">
-                  <div className="space-y-2">
-                    <p className="text-lg font-semibold text-gray-800">5 Essential Tips for Startup Success</p>
-                    <p className="text-sm text-gray-600">Sharing insights from my entrepreneurial journey...</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#0077B5] to-[#00a0dc]"></div>
-                  <span className="font-semibold">LinkedIn Post</span>
-                </div>
-              </div>
-            </div>
+            <PlatformCard 
+              platform={{
+                name: "Instagram Carousel",
+                icon: <Instagram />,
+                color: "from-[#833AB4] via-[#FD1D1D] to-[#F77737]",
+                mediaType: "Carousel",
+                mediaIcon: <Image className="w-4 h-4" />
+              }}
+            />
+            <PlatformCard 
+              platform={{
+                name: "TikTok Video",
+                icon: <Video />,
+                color: "from-[#00f2ea] to-[#ff0050]",
+                mediaType: "Video",
+                mediaIcon: <Video className="w-4 h-4" />
+              }}
+            />
+            <PlatformCard 
+              platform={{
+                name: "LinkedIn Post",
+                icon: <Linkedin />,
+                color: "from-[#0077B5] to-[#00a0dc]",
+                mediaType: "Article",
+                mediaIcon: <FileText className="w-4 h-4" />
+              }}
+            />
           </div>
 
           <div className="text-center text-lg text-gray-600 font-medium">
