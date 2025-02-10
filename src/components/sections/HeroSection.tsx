@@ -60,13 +60,16 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                     <div className="font-semibold">Andy de la Pena</div>
                     <Twitter className="h-5 w-5 text-[#1DA1F2]" />
                   </div>
-                  <div className="w-full aspect-square">
-                    <img 
-                      src="/lovable-uploads/0efde121-dc7b-41c6-a6f4-31a3035386c7.png" 
-                      alt="Social media post about cross-posting tweets" 
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                  </div>
+                  <p className="text-sm text-gray-500 space-y-2">
+                    I took my top tweets and posted them on Instagram, TikTok, and LinkedIn.
+                    <br /><br />
+                    The results?<br />
+                    🔥 3x more engagement<br />
+                    🔥 5x more reach<br />
+                    🔥 More brand awareness<br />
+                    <br />
+                    Your audience is not just on X
+                  </p>
                 </div>
               </div>
             </Card>
