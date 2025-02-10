@@ -34,7 +34,7 @@ export function PainPointsSection() {
           Struggling to <span className="text-[#8B5CF6]">Repurpose</span> Your Tweets?
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mb-8">
-          Twitter/X is fun, but you're leaving money on the table by not reaching audiences on Instagram, TikTok, LinkedIn, and beyond.
+          X is great, but you're <span className="font-bold">missing out</span> on views, Likes and growth by not posting on <span className="font-bold">other platforms</span>.
         </p>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 w-full max-w-4xl">
           {painPoints.map((point, index) => (
