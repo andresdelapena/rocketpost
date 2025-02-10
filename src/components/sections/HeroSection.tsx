@@ -42,11 +42,6 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
         <motion.h2 
           className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default"
         >
-          2. Get Ready-To-Post Content for <span className="text-[#8B5CF6]">All Social Media</span>
-        </motion.h2>
-        <motion.h2 
-          className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default"
-        >
           <span className="text-[#8B5CF6]">1. Pick a Post</span>
         </motion.h2>
         <motion.div
@@ -79,6 +74,12 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
               </div>
             </Card>
           </div>
+
+          <motion.h2 
+            className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default"
+          >
+            2. Get Ready-To-Post Content for <span className="text-[#8B5CF6]">All Social Media</span>
+          </motion.h2>
 
           <div className="space-y-6">
             <div className="grid gap-8 md:grid-cols-3">
