@@ -28,7 +28,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           In One Click
         </h1>
         <p className="mx-auto max-w-[700px] text-gray-500 text-xl md:text-2xl dark:text-gray-400 py-4">
-          Turn your Tweets into engaging content <span className="font-medium">for every platform</span>
+          Turn your Tweets into engaging content for every platform
           <br /><br />
           Save hours of work and reach more people.
         </p>
@@ -39,6 +39,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
         </div>
       </div>
       <div className="mx-auto max-w-5xl py-24">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">1️⃣ Pick a Post</h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
