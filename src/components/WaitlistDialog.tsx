@@ -53,13 +53,13 @@ export function WaitlistDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px] bg-white/50 backdrop-blur-sm border border-blue-200/60">
+      <DialogContent className="sm:max-w-[425px] bg-[#F1F1F1]/90 backdrop-blur-sm">
         <DialogHeader className="space-y-3">
           <DialogTitle className="text-2xl font-bold tracking-tighter text-[#1F1F1F]">
             Join the Waitlist
           </DialogTitle>
           <p className="text-gray-600">
-            Enter your email to claim 20% off at launch
+            Enter your email to claim 20% off at launch 🚀
           </p>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-6 pt-4">
