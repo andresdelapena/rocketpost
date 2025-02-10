@@ -122,7 +122,11 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                     <Flame className="h-4 w-4" />
                     <div className="font-semibold">Instagram</div>
                   </div>
-                  <div className="aspect-square bg-gray-100 rounded-lg" />
+                  <img 
+                    src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
+                    alt="Instagram post preview"
+                    className="aspect-square w-full object-cover rounded-lg"
+                  />
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
