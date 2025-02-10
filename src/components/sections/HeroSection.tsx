@@ -62,13 +62,14 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                     <Twitter className="h-5 w-5 text-[#1DA1F2]" />
                   </div>
                   <p className="text-sm text-gray-500 space-y-2">
-                    Here are my top 5 productivity tips that helped me grow my startup from 0 to 100k MRR! 🚀
+                    I took my top tweets and posted them on Instagram, TikTok, and LinkedIn.
                     <br /><br />
-                    1. Wake up at 5am<br />
-                    2. Cold showers<br />
-                    3. Meditate for 1hr<br />
-                    4. Read 2 books/day<br />
-                    5. Network 24/7
+                    The results?<br />
+                    🔥 3x more engagement<br />
+                    🔥 5x more reach<br />
+                    🔥 More brand awareness<br />
+                    <br />
+                    Your audience is not just on X
                   </p>
                 </div>
               </div>
