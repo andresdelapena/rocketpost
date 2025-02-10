@@ -38,7 +38,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           </Button>
         </div>
       </div>
-      <div className="mx-auto max-w-5xl py-16">
+      <div className="mx-auto max-w-5xl py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
