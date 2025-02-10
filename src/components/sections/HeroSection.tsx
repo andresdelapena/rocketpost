@@ -1,9 +1,8 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { ArrowRight, Dot, Flame, Video, Twitter } from "lucide-react";
+import { ArrowRight, Heart, MessageCircle, Twitter, Video, Flame, Dot } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
 import { motion } from "framer-motion";
@@ -91,10 +90,29 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                     <div className="font-semibold">TikTok</div>
                   </div>
                   <div className="aspect-video bg-gray-100 rounded-lg" />
-                  <div className="flex space-x-2">
-                    <Dot />
-                    <Dot className="text-gray-300" />
-                    <Dot className="text-gray-300" />
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <Heart className="h-5 w-5 text-gray-400" />
+                        <MessageCircle className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <span className="text-sm text-gray-500">1,337 likes</span>
+                    </div>
+                    <div className="text-sm">
+                      <span className="font-semibold">janedoe</span>{" "}
+                      This looks awesome! Can't wait to try it out.
+                    </div>
+                    <span className="text-sm text-gray-500">View all 42 comments</span>
+                    <div className="flex items-center border-t pt-3 mt-2">
+                      <input 
+                        type="text" 
+                        placeholder="Add a comment..." 
+                        className="w-full bg-transparent text-sm outline-none"
+                      />
+                      <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
+                        Post
+                      </button>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -105,10 +123,29 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                     <div className="font-semibold">Instagram</div>
                   </div>
                   <div className="aspect-square bg-gray-100 rounded-lg" />
-                  <div className="flex space-x-2">
-                    <Dot />
-                    <Dot className="text-gray-300" />
-                    <Dot className="text-gray-300" />
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <Heart className="h-5 w-5 text-gray-400" />
+                        <MessageCircle className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <span className="text-sm text-gray-500">1,337 likes</span>
+                    </div>
+                    <div className="text-sm">
+                      <span className="font-semibold">janedoe</span>{" "}
+                      This looks awesome! Can't wait to try it out.
+                    </div>
+                    <span className="text-sm text-gray-500">View all 42 comments</span>
+                    <div className="flex items-center border-t pt-3 mt-2">
+                      <input 
+                        type="text" 
+                        placeholder="Add a comment..." 
+                        className="w-full bg-transparent text-sm outline-none"
+                      />
+                      <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
+                        Post
+                      </button>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -119,10 +156,29 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                     <div className="font-semibold">LinkedIn</div>
                   </div>
                   <div className="aspect-video bg-gray-100 rounded-lg" />
-                  <div className="flex space-x-2">
-                    <Dot />
-                    <Dot className="text-gray-300" />
-                    <Dot className="text-gray-300" />
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <Heart className="h-5 w-5 text-gray-400" />
+                        <MessageCircle className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <span className="text-sm text-gray-500">1,337 likes</span>
+                    </div>
+                    <div className="text-sm">
+                      <span className="font-semibold">janedoe</span>{" "}
+                      This looks awesome! Can't wait to try it out.
+                    </div>
+                    <span className="text-sm text-gray-500">View all 42 comments</span>
+                    <div className="flex items-center border-t pt-3 mt-2">
+                      <input 
+                        type="text" 
+                        placeholder="Add a comment..." 
+                        className="w-full bg-transparent text-sm outline-none"
+                      />
+                      <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
+                        Post
+                      </button>
+                    </div>
                   </div>
                 </div>
               </Card>
