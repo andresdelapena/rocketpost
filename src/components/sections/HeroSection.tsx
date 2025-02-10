@@ -42,7 +42,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
         <motion.h2 
           className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default text-[#1F1F1F]"
         >
-          <span className="text-[#8B5CF6]">1. Pick a Post</span>
+          1. Pick a Post
         </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
