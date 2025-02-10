@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -5,7 +6,7 @@ import { Progress } from "@/components/ui/progress";
 import { ArrowRight, Heart, MessageCircle, Twitter, Video, Flame, Dot } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface HeroSectionProps {
   onWaitlistClick: () => void;
@@ -13,7 +14,6 @@ interface HeroSectionProps {
 
 export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
   const [progress, setProgress] = React.useState(33);
-  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
     const timer = setTimeout(() => setProgress(66), 500);
@@ -123,37 +123,11 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                     <Flame className="h-4 w-4" />
                     <div className="font-semibold">Instagram</div>
                   </div>
-                  <div 
-                    className="relative w-full aspect-square"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                  >
-                    <AnimatePresence initial={false} mode="wait">
-                      {!isHovered ? (
-                        <motion.img
-                          key="image1"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.2 }}
-                          src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
-                          alt="Instagram post preview"
-                          className="absolute inset-0 w-full h-full object-cover rounded-lg border border-gray-200"
-                        />
-                      ) : (
-                        <motion.img
-                          key="image2"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.2 }}
-                          src="/lovable-uploads/37332b53-78a8-4262-939b-005cd42a3199.png"
-                          alt="Instagram post hover preview"
-                          className="absolute inset-0 w-full h-full object-cover rounded-lg border border-gray-200"
-                        />
-                      )}
-                    </AnimatePresence>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
+                    alt="Instagram post preview"
+                    className="aspect-square w-full object-cover rounded-lg border border-gray-200"
+                  />
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
