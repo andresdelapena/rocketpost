@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -42,8 +41,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
         <motion.h2 
           className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default"
         >
-          <span className="text-black">1. </span>
-          <span className="text-[#8B5CF6]">Pick a Post</span>
+          <span className="text-[#8B5CF6]">1. Pick a Post</span>
         </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
