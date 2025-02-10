@@ -53,7 +53,7 @@ export function WaitlistDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px] bg-[#F1F1F1]/90 backdrop-blur-sm">
+      <DialogContent className="sm:max-w-[425px] bg-[#F1F1F1]">
         <DialogHeader className="space-y-3">
           <DialogTitle className="text-2xl font-bold tracking-tighter text-[#1F1F1F]">
             Join the Waitlist
