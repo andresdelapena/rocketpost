@@ -40,7 +40,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
       </div>
       <div className="mx-auto max-w-5xl py-24">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default"
+          className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default text-[#1F1F1F]"
         >
           <span className="text-[#8B5CF6]">1. Pick a Post</span>
         </motion.h2>
@@ -76,7 +76,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           </div>
 
           <motion.h2 
-            className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default"
+            className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default text-[#1F1F1F]"
           >
             2. Get Ready-To-Post Content for <span className="text-[#8B5CF6]">All Social Media</span>
           </motion.h2>
