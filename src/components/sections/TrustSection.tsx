@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -9,8 +10,8 @@ export const TrustSection = () => {
   return (
     <section className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
       <div className="flex flex-col items-center text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-[#1A1F71] via-[#3d4190] to-[#6064af] bg-clip-text text-transparent">
-          Emails You Can Trust
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#1F1F1F]">
+          Emails You Can <span className="text-[#8B5CF6]">Trust</span>
         </h2>
         <Carousel
           className="w-full"

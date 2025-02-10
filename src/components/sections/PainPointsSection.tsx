@@ -1,6 +1,11 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Clock, Brush, Layout, Eye } from "lucide-react";
+import {
+  Clock,
+  Brush,
+  Layout,
+  Eye,
+} from "lucide-react";
 
 export function PainPointsSection() {
   const painPoints = [
@@ -25,8 +30,8 @@ export function PainPointsSection() {
   return (
     <section className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
       <div className="flex flex-col items-center text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-[#1A1F71] via-[#3d4190] to-[#6064af] bg-clip-text text-transparent">
-          Struggling to Repurpose Your Tweets?
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#1F1F1F]">
+          Struggling to <span className="text-[#8B5CF6]">Repurpose</span> Your Tweets?
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mb-8">
           Twitter/X is fun, but you're leaving money on the table by not reaching audiences on Instagram, TikTok, LinkedIn, and beyond.

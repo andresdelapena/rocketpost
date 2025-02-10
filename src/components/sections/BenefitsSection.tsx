@@ -1,3 +1,4 @@
+
 import { Clock, UserCheck, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -5,8 +6,8 @@ export function BenefitsSection() {
   return (
     <section id="benefits" className="container max-w-5xl mx-auto px-4 py-24 space-y-8 animate-fade-in">
       <div className="flex flex-col items-center text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-[#1A1F71] via-[#3d4190] to-[#6064af] bg-clip-text text-transparent animate-slide-up">
-          Why Choose Regardss?
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#1F1F1F]">
+          Why Choose <span className="text-[#8B5CF6]">Regardss</span>?
         </h2>
         <p className="text-lg text-muted-foreground max-w-[42rem] mx-auto">
           Regardss helps <strong>client-facing</strong> professionals <strong>save time</strong> writing and replying to emails with an AI assistant <strong>trained on your</strong> company, role, and tone
