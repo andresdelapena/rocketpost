@@ -60,7 +60,7 @@ export function SolutionSection({ onWaitlistClick }: SolutionSectionProps) {
             <Button 
               onClick={onWaitlistClick}
               size="lg"
-              className="bg-[#FF6978] hover:bg-[#ff8591] text-white"
+              className="bg-[#FF6978] hover:bg-[#ff8591] text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
             >
               🔥 Join Waitlist - Get 50% Off
             </Button>
