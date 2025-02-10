@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -38,6 +39,11 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
         </div>
       </div>
       <div className="mx-auto max-w-5xl py-24">
+        <motion.h2 
+          className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default"
+        >
+          2. Get Ready-To-Post Content for <span className="text-[#8B5CF6]">All Social Media</span>
+        </motion.h2>
         <motion.h2 
           className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default"
         >
