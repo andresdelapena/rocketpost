@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -52,21 +53,36 @@ export function WaitlistDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>Join the Waitlist</DialogTitle>
+      <DialogContent className="sm:max-w-[425px] bg-white/50 backdrop-blur-sm border border-blue-200/60">
+        <DialogHeader className="space-y-3">
+          <DialogTitle className="text-2xl font-bold tracking-tighter text-[#1F1F1F]">
+            Join the Waitlist
+          </DialogTitle>
+          <p className="text-gray-600">
+            Enter your email to claim 20% off at launch
+          </p>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4 pt-4">
+        <form onSubmit={handleSubmit} className="space-y-6 pt-4">
           <Input
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className="bg-white/70 border-blue-200/60 focus:border-[#8B5CF6] focus:ring-[#8B5CF6]"
           />
-          <Button type="submit" className="w-full" disabled={isLoading}>
-            {isLoading ? "Joining..." : "Join"}
-          </Button>
+          <div className="space-y-4">
+            <Button 
+              type="submit" 
+              className="w-full bg-[#FF6978] hover:bg-[#ff8591] text-white text-lg px-6 py-4 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
+              disabled={isLoading}
+            >
+              {isLoading ? "Joining..." : "Join Waitlist"}
+            </Button>
+            <p className="text-sm text-gray-500 text-center">
+              Limited Spots Available for Beta Launch
+            </p>
+          </div>
         </form>
       </DialogContent>
     </Dialog>
