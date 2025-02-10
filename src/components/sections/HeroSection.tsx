@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -123,11 +122,16 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                     <Flame className="h-4 w-4" />
                     <div className="font-semibold">Instagram</div>
                   </div>
-                  <img 
-                    src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
-                    alt="Instagram post preview"
-                    className="aspect-square w-full object-cover rounded-lg border border-gray-200"
-                  />
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <img 
+                      src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
+                      alt="Instagram post preview"
+                      className="aspect-square w-full object-cover rounded-lg border border-gray-200"
+                    />
+                  </motion.div>
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
