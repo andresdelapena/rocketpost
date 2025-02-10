@@ -6,7 +6,6 @@ import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PainPointsSection } from "@/components/sections/PainPointsSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
-import { PricingSection } from "@/components/sections/PricingSection";
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
 import { AnimatedBackground } from "@/components/background/AnimatedBackground";
 
@@ -32,7 +31,6 @@ export default function Index() {
         <HeroSection onWaitlistClick={handleWaitlistClick} />
         <PainPointsSection />
         <SolutionSection onWaitlistClick={handleWaitlistClick} />
-        <PricingSection />
         <FinalCTASection onWaitlistClick={handleWaitlistClick} />
       </main>
 

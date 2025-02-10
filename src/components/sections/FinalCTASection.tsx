@@ -10,8 +10,10 @@ export const FinalCTASection = ({ onWaitlistClick }: FinalCTASectionProps) => {
   return (
     <section id="waitlist" className="container max-w-5xl mx-auto px-4 py-24 space-y-8">
       <div className="flex flex-col items-center text-center space-y-6">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-[#1A1F71] via-[#3d4190] to-[#6064af] bg-clip-text text-transparent">
-          Turn Tweets Into High-Impact Content – Instantly
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#1F1F1F]">
+          Turn Tweets into High-Impact Content
+          <br />
+          In <span className="text-[#8B5CF6]">ONE</span> Click
         </h2>
         <div className="space-y-6">
           <Button 
