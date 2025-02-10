@@ -40,9 +40,10 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
       </div>
       <div className="mx-auto max-w-5xl py-24">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-12 text-[#A6A3F8] transition-transform duration-300 hover:scale-105 cursor-default"
+          className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default"
         >
-          1. Pick a Post
+          <span className="text-black">1. </span>
+          <span className="text-[#8B5CF6]">Pick a Post</span>
         </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
