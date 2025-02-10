@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -126,7 +125,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                   <img 
                     src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
                     alt="Instagram post preview"
-                    className="aspect-square w-full object-cover rounded-lg border border-gray-200"
+                    className="aspect-square w-full object-cover rounded-lg border border-gray-200 -ml-2 mt-2"
                   />
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
