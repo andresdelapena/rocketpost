@@ -152,7 +152,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                     <div className="space-y-2">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
-                          <Heart className="h-5 w-5 text-gray-400" />
+                          <Heart className="h-5 w-5 text-red-500" />
                           <MessageCircle className="h-5 w-5 text-gray-400" />
                         </div>
                         <span className="text-sm text-gray-500">1,337 likes</span>
