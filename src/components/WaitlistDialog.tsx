@@ -87,7 +87,7 @@ export function WaitlistDialog({
             Join the Waitlist
           </DialogTitle>
           <p className="text-gray-600">
-            Enter your email to claim 20% off at launch 🚀
+            Enter your Email to Claim 50% Off at Launch 🚀
           </p>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-6 pt-4">
