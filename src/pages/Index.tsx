@@ -15,53 +15,45 @@ export default function Index() {
   const [dialogOpen, setDialogOpen] = useState(false);
 
   useEffect(() => {
-    try {
-      // Track page view on component mount
-      trackPageView('Home Page', '/');
+    // Track page view on component mount
+    trackPageView('Home Page', '/');
 
-      // Set up scroll tracking with debounce
-      let scrollTimeout: NodeJS.Timeout;
-      const handleScroll = () => {
-        if (scrollTimeout) {
-          clearTimeout(scrollTimeout);
-        }
+    // Set up scroll tracking with debounce
+    let scrollTimeout: NodeJS.Timeout;
+    const handleScroll = () => {
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+      
+      scrollTimeout = setTimeout(() => {
+        const scrollPercent = Math.round(
+          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+        );
         
-        scrollTimeout = setTimeout(() => {
-          const scrollPercent = Math.round(
-            (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-          );
-          
-          if (scrollPercent >= 25 && scrollPercent < 50) {
-            trackScroll(25);
-          } else if (scrollPercent >= 50 && scrollPercent < 75) {
-            trackScroll(50);
-          } else if (scrollPercent >= 75 && scrollPercent < 100) {
-            trackScroll(75);
-          } else if (scrollPercent === 100) {
-            trackScroll(100);
-          }
-        }, 100);
-      };
-
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-        if (scrollTimeout) {
-          clearTimeout(scrollTimeout);
+        if (scrollPercent >= 25 && scrollPercent < 50) {
+          trackScroll(25);
+        } else if (scrollPercent >= 50 && scrollPercent < 75) {
+          trackScroll(50);
+        } else if (scrollPercent >= 75 && scrollPercent < 100) {
+          trackScroll(75);
+        } else if (scrollPercent === 100) {
+          trackScroll(100);
         }
-      };
-    } catch (error) {
-      console.error('Error in scroll tracking:', error);
-    }
+      }, 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    try {
-      const element = document.getElementById(sectionId);
-      element?.scrollIntoView({ behavior: "smooth" });
-    } catch (error) {
-      console.error('Error scrolling to section:', error);
-    }
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleWaitlistClick = () => {
