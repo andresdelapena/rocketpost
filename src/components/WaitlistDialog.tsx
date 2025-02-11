@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
-import { trackEvent } from "@/utils/analytics";
 
 export function WaitlistDialog({
   open,
@@ -22,7 +21,8 @@ export function WaitlistDialog({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+    console.log("Submitting email:", email);
+
     try {
       const response = await fetch("https://hook.eu2.make.com/9usncqxw93i58oglf3l5p8r4b7vusblj", {
         method: "POST",
@@ -36,21 +36,11 @@ export function WaitlistDialog({
         throw new Error("Failed to submit");
       }
 
-      // Track successful conversion
-      trackEvent('waitlist_signup', {
-        signup_location: 'dialog',
-        user_type: 'new'
-      });
-
+      console.log("Submission successful");
       onOpenChange(false);
       navigate("/thank-you");
     } catch (error) {
       console.error("Submission error:", error);
-      // Track failed submission
-      trackEvent('waitlist_error', {
-        error_type: 'submission_failed'
-      });
-      
       toast({
         variant: "destructive",
         title: "Error",
@@ -86,7 +76,6 @@ export function WaitlistDialog({
               type="submit" 
               className="w-full bg-[#FF6978] hover:bg-[#ff8591] text-white text-lg px-6 py-4 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
               disabled={isLoading}
-              onClick={() => trackEvent('waitlist_button_click', { location: 'dialog' })}
             >
               {isLoading ? "Joining..." : "Join Waitlist"}
             </Button>
