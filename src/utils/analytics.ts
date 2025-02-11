@@ -15,7 +15,7 @@ export const trackPageView = (page_title: string, page_path: string) => {
     (window as any).gtag('event', 'page_view', {
       page_title,
       page_path,
-      send_to: 'G-D6V385K2DK'
+      send_to: 'G-M444WRK2KP'
     });
   }
 };
