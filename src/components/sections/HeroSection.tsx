@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -146,7 +145,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                       <div className="font-semibold">Instagram</div>
                     </div>
                     <img 
-                      src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
+                      src="/lovable-uploads/6927ee6a-9afa-4c52-b633-047128c390ac.png"
                       alt="Instagram post preview"
                       className="aspect-square w-full object-cover rounded-lg border border-gray-200"
                     />
@@ -159,8 +158,8 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                         <span className="text-sm text-gray-500">1,337 likes</span>
                       </div>
                       <div className="text-sm">
-                        <span className="font-semibold">janedoe</span>{" "}
-                        This looks awesome! Can't wait to try it out.
+                        <span className="font-semibold">andydelapena</span>{" "}
+                        This tool has saved me 5+ hours every week
                       </div>
                       <span className="text-sm text-gray-500">View all 42 comments</span>
                       <div className="flex items-center border-t pt-3 mt-2">
