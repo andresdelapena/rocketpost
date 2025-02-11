@@ -59,6 +59,8 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
       </div>
       <div className="mx-auto max-w-5xl py-24">
         <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           className="text-3xl font-bold text-center mb-12 text-[#1F1F1F]"
         >
           1. Pick a Post
@@ -70,37 +72,34 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           className="grid gap-12"
         >
           <div className="flex justify-center">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Card className="p-6 max-w-md w-full">
-                <div className="flex items-start space-x-4">
-                  <Avatar className="h-10 w-10 border">
-                    <AvatarImage alt="Profile picture" src="/lovable-uploads/9ccd389b-f7a9-4ed4-b5b6-0d17585b99a5.png" />
-                  </Avatar>
-                  <div className="flex-1 space-y-3">
-                    <div className="flex items-center space-x-2">
-                      <div className="font-semibold">Andy de la Pena</div>
-                      <Twitter className="h-5 w-5 text-[#1DA1F2]" />
-                    </div>
-                    <p className="text-sm text-gray-500 space-y-2">
-                      I took my top tweets and posted them on Instagram, TikTok, and LinkedIn.
-                      <br /><br />
-                      The results?<br />
-                      🔥 3x more engagement<br />
-                      🔥 5x more reach<br />
-                      🔥 More brand awareness<br />
-                      <br />
-                      Your audience is not just on X
-                    </p>
+            <Card className="p-6 max-w-md w-full transform transition-transform duration-200 hover:scale-110">
+              <div className="flex items-start space-x-4">
+                <Avatar className="h-10 w-10 border">
+                  <AvatarImage alt="Profile picture" src="/lovable-uploads/9ccd389b-f7a9-4ed4-b5b6-0d17585b99a5.png" />
+                </Avatar>
+                <div className="flex-1 space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <div className="font-semibold">Andy de la Pena</div>
+                    <Twitter className="h-5 w-5 text-[#1DA1F2]" />
                   </div>
+                  <p className="text-sm text-gray-500 space-y-2">
+                    I took my top tweets and posted them on Instagram, TikTok, and LinkedIn.
+                    <br /><br />
+                    The results?<br />
+                    🔥 3x more engagement<br />
+                    🔥 5x more reach<br />
+                    🔥 More brand awareness<br />
+                    <br />
+                    Your audience is not just on X
+                  </p>
                 </div>
-              </Card>
-            </motion.div>
+              </div>
+            </Card>
           </div>
 
           <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             className="text-3xl font-bold text-center mb-12 text-[#1F1F1F]"
           >
             2. Get Ready-To-Post Content for <span className="text-[#8B5CF6]">All Social Media</span>
@@ -108,53 +107,50 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
 
           <div className="grid gap-8 md:grid-cols-3">
             {socialPlatforms.map((platform) => (
-              <motion.div
-                key={platform.name}
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.2 }}
+              <Card 
+                key={platform.name} 
+                className="p-6 transform transition-transform duration-200 hover:scale-110"
               >
-                <Card className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
-                      {platform.icon}
-                      <div className="font-semibold">{platform.name}</div>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-2">
+                    {platform.icon}
+                    <div className="font-semibold">{platform.name}</div>
+                  </div>
+                  {platform.name === 'Instagram' ? (
+                    <img 
+                      src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
+                      alt="Instagram post preview"
+                      className="aspect-square w-full object-cover rounded-lg border border-gray-200"
+                    />
+                  ) : (
+                    <div className="aspect-video bg-gray-100 rounded-lg" />
+                  )}
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <Heart className="h-5 w-5 text-gray-400" />
+                        <MessageCircle className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <span className="text-sm text-gray-500">1,337 likes</span>
                     </div>
-                    {platform.name === 'Instagram' ? (
-                      <img 
-                        src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
-                        alt="Instagram post preview"
-                        className="aspect-square w-full object-cover rounded-lg border border-gray-200"
+                    <div className="text-sm">
+                      <span className="font-semibold">janedoe</span>{" "}
+                      This looks awesome! Can't wait to try it out.
+                    </div>
+                    <span className="text-sm text-gray-500">View all 42 comments</span>
+                    <div className="flex items-center border-t pt-3 mt-2">
+                      <input 
+                        type="text" 
+                        placeholder="Add a comment..." 
+                        className="w-full bg-transparent text-sm outline-none"
                       />
-                    ) : (
-                      <div className="aspect-video bg-gray-100 rounded-lg" />
-                    )}
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          <Heart className="h-5 w-5 text-gray-400" />
-                          <MessageCircle className="h-5 w-5 text-gray-400" />
-                        </div>
-                        <span className="text-sm text-gray-500">1,337 likes</span>
-                      </div>
-                      <div className="text-sm">
-                        <span className="font-semibold">janedoe</span>{" "}
-                        This looks awesome! Can't wait to try it out.
-                      </div>
-                      <span className="text-sm text-gray-500">View all 42 comments</span>
-                      <div className="flex items-center border-t pt-3 mt-2">
-                        <input 
-                          type="text" 
-                          placeholder="Add a comment..." 
-                          className="w-full bg-transparent text-sm outline-none"
-                        />
-                        <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
-                          Post
-                        </button>
-                      </div>
+                      <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
+                        Post
+                      </button>
                     </div>
                   </div>
-                </Card>
-              </motion.div>
+                </div>
+              </Card>
             ))}
           </div>
         </motion.div>
