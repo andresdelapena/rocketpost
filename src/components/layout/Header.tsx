@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -22,11 +23,11 @@ export function Header({ scrollToSection, onWaitlistClick }: HeaderProps) {
         </Link>
         <div className="flex-1 flex justify-end items-center gap-6">
           <nav className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:flex absolute md:relative top-16 left-0 md:top-0 w-full md:w-auto flex-col md:flex-row items-center md:items-center gap-4 md:gap-6 bg-white md:bg-transparent p-4 md:p-0 border-b md:border-0`}>
-            <button onClick={() => scrollToSection("benefits")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-center w-full md:w-auto max-w-[15.625rem]">
-              Benefits
-            </button>
             <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-center w-full md:w-auto max-w-[15.625rem]">
               How It Works
+            </button>
+            <button onClick={() => scrollToSection("benefits")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-center w-full md:w-auto max-w-[15.625rem]">
+              Benefits
             </button>
             <Button onClick={onWaitlistClick} className="md:hidden w-full max-w-[15.625rem] bg-[#FF6978] hover:bg-[#ff8591] text-white">
               Join Waitlist - Get 50% Off
