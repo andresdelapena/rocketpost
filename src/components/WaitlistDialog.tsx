@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
+import { trackWaitlistForm } from "@/lib/analytics";
 
 export function WaitlistDialog({
   open,
@@ -21,7 +21,7 @@ export function WaitlistDialog({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    console.log("Submitting email:", email);
+    trackWaitlistForm('complete', email);
 
     try {
       const response = await fetch("https://hook.eu2.make.com/9usncqxw93i58oglf3l5p8r4b7vusblj", {
@@ -51,8 +51,15 @@ export function WaitlistDialog({
     }
   };
 
+  const handleDialogOpen = (open: boolean) => {
+    if (open) {
+      trackWaitlistForm('start');
+    }
+    onOpenChange(open);
+  };
+
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={handleDialogOpen}>
       <DialogContent className="sm:max-w-[425px] bg-[#F1F1F1]">
         <DialogHeader className="space-y-3">
           <DialogTitle className="text-2xl font-bold tracking-tighter text-[#1F1F1F]">
