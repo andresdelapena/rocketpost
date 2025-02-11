@@ -7,10 +7,10 @@ export function BenefitsSection() {
     <section id="benefits" className="container max-w-5xl mx-auto px-4 py-24 space-y-8 animate-fade-in">
       <div className="flex flex-col items-center text-center space-y-4">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#1F1F1F]">
-          Why Choose <span className="text-[#8B5CF6]">Regardss</span>?
+          Why Choose <span className="text-[#8B5CF6]">RocketPost</span>?
         </h2>
         <p className="text-lg text-muted-foreground max-w-[42rem] mx-auto">
-          Regardss helps <strong>client-facing</strong> professionals <strong>save time</strong> writing and replying to emails with an AI assistant <strong>trained on your</strong> company, role, and tone
+          RocketPost helps <strong>client-facing</strong> professionals <strong>save time</strong> writing and replying to emails with an AI assistant <strong>trained on your</strong> company, role, and tone
         </p>
         <div className="mx-auto grid gap-4 sm:grid-cols-2 md:grid-cols-3 w-full place-items-center">
           {[

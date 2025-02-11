@@ -17,7 +17,7 @@ export const HowItWorksSection = () => {
               <div className="text-4xl font-bold text-[#A6A3F8]">1</div>
               <h3 className="font-bold">Set Up Your Profile</h3>
               <p className="text-sm text-muted-foreground">
-                Tell us about <strong>you</strong>. Regardss customizes its responses to fit your <strong>unique style</strong> and professional needs.
+                Tell us about <strong>you</strong>. RocketPost customizes its responses to fit your <strong>unique style</strong> and professional needs.
               </p>
             </CardContent>
           </Card>
@@ -35,7 +35,7 @@ export const HowItWorksSection = () => {
               <div className="text-4xl font-bold text-[#A6A3F8]">3</div>
               <h3 className="font-bold">Get Your Email</h3>
               <p className="text-sm text-muted-foreground">
-                Click '<strong>Generate</strong>' and let Regardss transform your input into a clear, professional email that's <strong>ready to send</strong>.
+                Click '<strong>Generate</strong>' and let RocketPost transform your input into a clear, professional email that's <strong>ready to send</strong>.
               </p>
             </CardContent>
           </Card>
