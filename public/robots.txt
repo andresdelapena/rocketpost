@@ -1,0 +1,9 @@
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://rocketpost.ai/sitemap.xml
+
+# Disallow thank you page from being indexed
+Disallow: /thank-you
