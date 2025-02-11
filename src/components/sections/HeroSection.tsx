@@ -86,6 +86,9 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           >
             2. Get Ready-To-Post Content for <span className="text-[#8B5CF6]">All Social Media</span>
           </motion.h2>
+          <p className="text-gray-500 text-lg text-center -mt-8 mb-4">
+            Generate images, videos, and carousels from a single tweet
+          </p>
 
           <div className="space-y-6">
             <div className="grid gap-8 md:grid-cols-3">
