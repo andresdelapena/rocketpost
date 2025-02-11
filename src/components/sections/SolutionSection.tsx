@@ -32,7 +32,7 @@ export function SolutionSection({ onWaitlistClick }: SolutionSectionProps) {
   ];
 
   return (
-    <section className="container max-w-5xl mx-auto px-4 py-24 space-y-12">
+    <section id="benefits" className="container max-w-5xl mx-auto px-4 py-24 space-y-12">
       <div className="flex flex-col items-center text-center space-y-8">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#1F1F1F]">
           One Tweet → Multiple <span className="text-[#8B5CF6]">Formats</span> in Seconds

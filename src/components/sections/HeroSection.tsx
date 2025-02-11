@@ -43,7 +43,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           </Button>
         </div>
       </div>
-      <div className="mx-auto max-w-5xl py-24">
+      <div id="how-it-works" className="mx-auto max-w-5xl py-24">
         <motion.h2 
           className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default text-[#1F1F1F]"
         >
