@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -15,11 +16,24 @@ export function WaitlistDialog({
 }) {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [emailError, setEmailError] = useState("");
   const navigate = useNavigate();
   const { toast } = useToast();
 
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+      return;
+    }
+
+    setEmailError("");
     setIsLoading(true);
     trackWaitlistForm('complete', email);
 
@@ -58,6 +72,13 @@ export function WaitlistDialog({
     onOpenChange(open);
   };
 
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    if (emailError) {
+      setEmailError("");
+    }
+  };
+
   return (
     <Dialog open={open} onOpenChange={handleDialogOpen}>
       <DialogContent className="sm:max-w-[425px] bg-[#F1F1F1]">
@@ -70,14 +91,21 @@ export function WaitlistDialog({
           </p>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-6 pt-4">
-          <Input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="bg-white/70 border-blue-200/60 focus:border-[#8B5CF6] focus:ring-[#8B5CF6]"
-          />
+          <div className="space-y-2">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={handleEmailChange}
+              required
+              className={`bg-white/70 border-blue-200/60 focus:border-[#8B5CF6] focus:ring-[#8B5CF6] ${
+                emailError ? "border-red-500" : ""
+              }`}
+            />
+            {emailError && (
+              <p className="text-sm text-red-500">{emailError}</p>
+            )}
+          </div>
           <div className="space-y-4">
             <Button 
               type="submit" 
