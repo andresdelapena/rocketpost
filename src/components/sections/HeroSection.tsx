@@ -145,7 +145,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                       <div className="font-semibold">Instagram</div>
                     </div>
                     <img 
-                      src="/lovable-uploads/6927ee6a-9afa-4c52-b633-047128c390ac.png"
+                      src="/lovable-uploads/1418662c-02bf-419a-bdcb-9df0833c7429.png"
                       alt="Instagram post preview"
                       className="aspect-square w-full object-cover rounded-lg border border-gray-200"
                     />
