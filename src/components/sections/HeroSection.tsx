@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -51,34 +50,29 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           className="grid gap-12"
         >
           <div className="flex justify-center">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Card className="p-6 max-w-md w-full">
-                <div className="flex items-start space-x-4">
-                  <Avatar className="h-10 w-10 border">
-                    <AvatarImage alt="Profile picture" src="/lovable-uploads/9ccd389b-f7a9-4ed4-b5b6-0d17585b99a5.png" />
-                  </Avatar>
-                  <div className="flex-1 space-y-3">
-                    <div className="flex items-center space-x-2">
-                      <div className="font-semibold">Andy de la Pena</div>
-                      <Twitter className="h-5 w-5 text-[#1DA1F2]" />
-                    </div>
-                    <p className="text-sm text-gray-500 space-y-2">
-                      I took my top tweets and posted them on Instagram, TikTok, and LinkedIn.
-                      <br /><br />
-                      The results?<br />
-                      🔥 3x more engagement<br />
-                      🔥 5x more reach<br />
-                      🔥 More brand awareness<br />
-                      <br />
-                      Your audience is not just on X
-                    </p>
+            <Card className="p-6 max-w-md w-full">
+              <div className="flex items-start space-x-4">
+                <Avatar className="h-10 w-10 border">
+                  <AvatarImage alt="Profile picture" src="/lovable-uploads/9ccd389b-f7a9-4ed4-b5b6-0d17585b99a5.png" />
+                </Avatar>
+                <div className="flex-1 space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <div className="font-semibold">Andy de la Pena</div>
+                    <Twitter className="h-5 w-5 text-[#1DA1F2]" />
                   </div>
+                  <p className="text-sm text-gray-500 space-y-2">
+                    I took my top tweets and posted them on Instagram, TikTok, and LinkedIn.
+                    <br /><br />
+                    The results?<br />
+                    🔥 3x more engagement<br />
+                    🔥 5x more reach<br />
+                    🔥 More brand awareness<br />
+                    <br />
+                    Your audience is not just on X
+                  </p>
                 </div>
-              </Card>
-            </motion.div>
+              </div>
+            </Card>
           </div>
 
           <motion.h2 
@@ -89,124 +83,114 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
 
           <div className="space-y-6">
             <div className="grid gap-8 md:grid-cols-3">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Card className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
-                      <Video className="h-4 w-4" />
-                      <div className="font-semibold">TikTok</div>
+              <Card className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-2">
+                    <Video className="h-4 w-4" />
+                    <div className="font-semibold">TikTok</div>
+                  </div>
+                  <div className="aspect-video bg-gray-100 rounded-lg" />
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <Heart className="h-5 w-5 text-gray-400" />
+                        <MessageCircle className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <span className="text-sm text-gray-500">1,337 likes</span>
                     </div>
-                    <div className="aspect-video bg-gray-100 rounded-lg" />
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          <Heart className="h-5 w-5 text-gray-400" />
-                          <MessageCircle className="h-5 w-5 text-gray-400" />
-                        </div>
-                        <span className="text-sm text-gray-500">1,337 likes</span>
-                      </div>
-                      <div className="text-sm">
-                        <span className="font-semibold">janedoe</span>{" "}
-                        This looks awesome! Can't wait to try it out.
-                      </div>
-                      <span className="text-sm text-gray-500">View all 42 comments</span>
-                      <div className="flex items-center border-t pt-3 mt-2">
-                        <input 
-                          type="text" 
-                          placeholder="Add a comment..." 
-                          className="w-full bg-transparent text-sm outline-none"
-                        />
-                        <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
-                          Post
-                        </button>
-                      </div>
+                    <div className="text-sm">
+                      <span className="font-semibold">janedoe</span>{" "}
+                      This looks awesome! Can't wait to try it out.
+                    </div>
+                    <span className="text-sm text-gray-500">View all 42 comments</span>
+                    <div className="flex items-center border-t pt-3 mt-2">
+                      <input 
+                        type="text" 
+                        placeholder="Add a comment..." 
+                        className="w-full bg-transparent text-sm outline-none"
+                      />
+                      <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
+                        Post
+                      </button>
                     </div>
                   </div>
-                </Card>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Card className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
-                      <Flame className="h-4 w-4" />
-                      <div className="font-semibold">Instagram</div>
-                    </div>
+                </div>
+              </Card>
+              <Card className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-2">
+                    <Flame className="h-4 w-4" />
+                    <div className="font-semibold">Instagram</div>
+                  </div>
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     <img 
                       src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
                       alt="Instagram post preview"
                       className="aspect-square w-full object-cover rounded-lg border border-gray-200"
                     />
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          <Heart className="h-5 w-5 text-gray-400" />
-                          <MessageCircle className="h-5 w-5 text-gray-400" />
-                        </div>
-                        <span className="text-sm text-gray-500">1,337 likes</span>
+                  </motion.div>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <Heart className="h-5 w-5 text-gray-400" />
+                        <MessageCircle className="h-5 w-5 text-gray-400" />
                       </div>
-                      <div className="text-sm">
-                        <span className="font-semibold">janedoe</span>{" "}
-                        This looks awesome! Can't wait to try it out.
-                      </div>
-                      <span className="text-sm text-gray-500">View all 42 comments</span>
-                      <div className="flex items-center border-t pt-3 mt-2">
-                        <input 
-                          type="text" 
-                          placeholder="Add a comment..." 
-                          className="w-full bg-transparent text-sm outline-none"
-                        />
-                        <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
-                          Post
-                        </button>
-                      </div>
+                      <span className="text-sm text-gray-500">1,337 likes</span>
+                    </div>
+                    <div className="text-sm">
+                      <span className="font-semibold">janedoe</span>{" "}
+                      This looks awesome! Can't wait to try it out.
+                    </div>
+                    <span className="text-sm text-gray-500">View all 42 comments</span>
+                    <div className="flex items-center border-t pt-3 mt-2">
+                      <input 
+                        type="text" 
+                        placeholder="Add a comment..." 
+                        className="w-full bg-transparent text-sm outline-none"
+                      />
+                      <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
+                        Post
+                      </button>
                     </div>
                   </div>
-                </Card>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Card className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
-                      <Video className="h-4 w-4" />
-                      <div className="font-semibold">LinkedIn</div>
+                </div>
+              </Card>
+              <Card className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-2">
+                    <Video className="h-4 w-4" />
+                    <div className="font-semibold">LinkedIn</div>
+                  </div>
+                  <div className="aspect-video bg-gray-100 rounded-lg" />
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <Heart className="h-5 w-5 text-gray-400" />
+                        <MessageCircle className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <span className="text-sm text-gray-500">1,337 likes</span>
                     </div>
-                    <div className="aspect-video bg-gray-100 rounded-lg" />
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          <Heart className="h-5 w-5 text-gray-400" />
-                          <MessageCircle className="h-5 w-5 text-gray-400" />
-                        </div>
-                        <span className="text-sm text-gray-500">1,337 likes</span>
-                      </div>
-                      <div className="text-sm">
-                        <span className="font-semibold">janedoe</span>{" "}
-                        This looks awesome! Can't wait to try it out.
-                      </div>
-                      <span className="text-sm text-gray-500">View all 42 comments</span>
-                      <div className="flex items-center border-t pt-3 mt-2">
-                        <input 
-                          type="text" 
-                          placeholder="Add a comment..." 
-                          className="w-full bg-transparent text-sm outline-none"
-                        />
-                        <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
-                          Post
-                        </button>
-                      </div>
+                    <div className="text-sm">
+                      <span className="font-semibold">janedoe</span>{" "}
+                      This looks awesome! Can't wait to try it out.
+                    </div>
+                    <span className="text-sm text-gray-500">View all 42 comments</span>
+                    <div className="flex items-center border-t pt-3 mt-2">
+                      <input 
+                        type="text" 
+                        placeholder="Add a comment..." 
+                        className="w-full bg-transparent text-sm outline-none"
+                      />
+                      <button className="text-sm font-semibold text-gray-400 hover:text-gray-600">
+                        Post
+                      </button>
                     </div>
                   </div>
-                </Card>
-              </motion.div>
+                </div>
+              </Card>
             </div>
           </div>
         </motion.div>
