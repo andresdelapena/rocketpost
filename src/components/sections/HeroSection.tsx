@@ -2,7 +2,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import { ArrowRight, Heart, MessageCircle, Twitter, Video, Flame } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
@@ -20,10 +19,11 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
     return () => clearTimeout(timer);
   }, []);
 
-  const cardVariants = {
-    initial: { scale: 1 },
-    hover: { scale: 1.1 },
-  };
+  const socialPlatforms = [
+    { name: 'TikTok', icon: <Video className="h-4 w-4" /> },
+    { name: 'Instagram', icon: <Flame className="h-4 w-4" /> },
+    { name: 'LinkedIn', icon: <Video className="h-4 w-4" /> }
+  ];
 
   return (
     <section className="container px-4 md:px-6 pt-32 pb-20">
@@ -71,9 +71,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
         >
           <div className="flex justify-center">
             <motion.div
-              variants={cardVariants}
-              initial="initial"
-              whileHover="hover"
+              whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.2 }}
             >
               <Card className="p-6 max-w-md w-full">
@@ -109,23 +107,19 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
           </motion.h2>
 
           <div className="grid gap-8 md:grid-cols-3">
-            {['TikTok', 'Instagram', 'LinkedIn'].map((platform, index) => (
+            {socialPlatforms.map((platform) => (
               <motion.div
-                key={platform}
-                variants={cardVariants}
-                initial="initial"
-                whileHover="hover"
+                key={platform.name}
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.2 }}
               >
                 <Card className="p-6">
                   <div className="space-y-4">
                     <div className="flex items-center space-x-2">
-                      {platform === 'TikTok' && <Video className="h-4 w-4" />}
-                      {platform === 'Instagram' && <Flame className="h-4 w-4" />}
-                      {platform === 'LinkedIn' && <Video className="h-4 w-4" />}
-                      <div className="font-semibold">{platform}</div>
+                      {platform.icon}
+                      <div className="font-semibold">{platform.name}</div>
                     </div>
-                    {platform === 'Instagram' ? (
+                    {platform.name === 'Instagram' ? (
                       <img 
                         src="/lovable-uploads/fc4808ca-b710-4d2f-b0ba-f971c1b59559.png"
                         alt="Instagram post preview"
