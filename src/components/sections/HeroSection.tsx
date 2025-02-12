@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -22,11 +23,11 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
   return (
     <section className="container px-4 md:px-6 pt-32 pb-20">
       <div className="flex flex-col items-center justify-center space-y-10 text-center">
-        <h1 className="text-5xl font-bold tracking-tighter sm:text-7xl xl:text-8xl/[1.2] leading-[1.4]">
+        <h1 className="text-5xl font-bold tracking-tighter sm:text-7xl xl:text-8xl/[1.1] leading-tight">
           From Tweets to <span className="text-[#8B5CF6]">All Social Media</span><br />
           In One Click
         </h1>
-        <p className="mx-auto max-w-[700px] text-gray-500 text-xl md:text-2xl dark:text-gray-400 py-4">
+        <p className="mx-auto max-w-[700px] text-gray-500 text-xl md:text-2xl leading-relaxed dark:text-gray-400 py-4">
           Turn your <strong>Tweets</strong> into engaging content for <strong>every platform</strong>
           <br /><br />
           Save hours of work and reach more people.
@@ -44,7 +45,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
       </div>
       <div id="how-it-works" className="mx-auto max-w-5xl py-24">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default text-[#1F1F1F]"
+          className="text-3xl font-bold text-center mb-12 transition-transform duration-300 hover:scale-105 cursor-default text-[#1F1F1F] leading-relaxed"
         >
           1. Pick a Post
         </motion.h2>
