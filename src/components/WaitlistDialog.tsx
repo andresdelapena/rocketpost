@@ -27,35 +27,42 @@ export function WaitlistDialog({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form submitted with email:", email); // Debug log
     
     if (!validateEmail(email)) {
+      console.log("Email validation failed"); // Debug log
       setEmailError("Please enter a valid email address");
       return;
     }
 
+    console.log("Email validation passed, proceeding with submission"); // Debug log
     setEmailError("");
     setIsLoading(true);
     trackWaitlistForm('complete', email);
 
     try {
-      // Log the payload being sent
-      console.log("Sending webhook payload:", { email: email.trim() });
+      const payload = { 
+        email: email.trim(),
+        source: "waitlist_dialog",
+        timestamp: new Date().toISOString(),
+        url: window.location.href
+      };
+      
+      // Log the exact payload being sent
+      console.log("Sending webhook payload:", payload);
       
       const response = await fetch("https://hook.eu2.make.com/9usncqxw93i58oglf3l5p8r4b7vusblj", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ 
-          email: email.trim(),
-          source: "waitlist_dialog",
-          timestamp: new Date().toISOString(),
-          url: window.location.href
-        }),
+        body: JSON.stringify(payload),
       });
 
+      console.log("Webhook response status:", response.status); // Debug log
+      
       if (!response.ok) {
-        throw new Error("Failed to submit");
+        throw new Error(`Failed to submit: ${response.status}`);
       }
 
       console.log("Submission successful");
@@ -75,6 +82,7 @@ export function WaitlistDialog({
 
   const handleDialogOpen = (open: boolean) => {
     if (open) {
+      console.log("Dialog opened"); // Debug log
       trackWaitlistForm('start');
     }
     onOpenChange(open);
