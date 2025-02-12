@@ -38,12 +38,20 @@ export function WaitlistDialog({
     trackWaitlistForm('complete', email);
 
     try {
+      // Log the payload being sent
+      console.log("Sending webhook payload:", { email: email.trim() });
+      
       const response = await fetch("https://hook.eu2.make.com/9usncqxw93i58oglf3l5p8r4b7vusblj", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ 
+          email: email.trim(),
+          source: "waitlist_dialog",
+          timestamp: new Date().toISOString(),
+          url: window.location.href
+        }),
       });
 
       if (!response.ok) {
