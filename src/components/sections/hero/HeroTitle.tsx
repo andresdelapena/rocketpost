@@ -12,7 +12,7 @@ export function HeroTitle({
   onWaitlistClick
 }: HeroTitleProps) {
   return <div className="flex flex-col items-center justify-center space-y-10 text-center">
-      <h1 className="text-5xl font-bold tracking-tighter xl:text-8xl/[1.1] leading-tight px-0 sm:text-7xl">
+      <h1 className="text-4xl font-bold tracking-tighter xl:text-7xl/[1.1] leading-tight px-0 sm:text-6xl">
         Instantly Repurpose Tweets into<br />
         Videos, Images & Posts—<br />
         <span className="text-[#8B5CF6]">In One Click!</span>
