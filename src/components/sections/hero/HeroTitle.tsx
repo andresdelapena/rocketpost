@@ -22,7 +22,7 @@ export function HeroTitle({
       </p>
       <div className="flex flex-col items-center gap-4">
         <Button onClick={onWaitlistClick} size="lg" className="bg-[#FF6978] hover:bg-[#ff8591] text-white" aria-label="Join waitlist for 50% discount">
-          Join the Waitlist Now - Get 50% Off <ArrowRight className="ml-2 h-4 w-4" />
+          Join the Waitlist Now - Get 50% Off at Launch <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
         
         <div className="flex items-center gap-2 bg-[#8B5CF6]/10 backdrop-blur-sm px-4 py-2 rounded-full">
