@@ -36,12 +36,12 @@ export function HeroTitle({
               <AvatarFallback>U2</AvatarFallback>
             </Avatar>
             <Avatar className="border-2 border-white w-6 h-6">
-              <AvatarImage src="/lovable-uploads/9ccd389b-f7a9-4ed4-b5b6-0d17585b99a5.png" alt="User avatar" />
+              <AvatarImage src="/lovable-uploads/d43ced98-41c8-45ba-a8e5-9e709a440aa9.png" alt="User avatar" />
               <AvatarFallback>U3</AvatarFallback>
             </Avatar>
           </div>
           <p className="text-sm text-gray-700 font-medium">
-            Join <span className="font-bold">42</span> others waiting for the best app ever!
+            Join <span className="font-bold">34</span> others waiting to 5x their reach
           </p>
         </div>
       </div>
