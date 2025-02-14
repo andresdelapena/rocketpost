@@ -6,15 +6,15 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#8B5CF6",
+  "theme_color": "#FF6978",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "/lovable-uploads/4467ae37-47fd-4ac7-acbb-9dcd617ea45d.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/lovable-uploads/4467ae37-47fd-4ac7-acbb-9dcd617ea45d.png",
       "sizes": "512x512",
       "type": "image/png"
     }
