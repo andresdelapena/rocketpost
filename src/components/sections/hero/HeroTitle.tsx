@@ -11,8 +11,8 @@ export function HeroTitle({ onWaitlistClick }: HeroTitleProps) {
   return (
     <div className="flex flex-col items-center justify-center space-y-10 text-center">
       <h1 className="text-5xl font-bold tracking-tighter sm:text-7xl xl:text-8xl/[1.1] leading-tight">
-        Transform Your Tweets into<br />
-        <span className="text-[#8B5CF6]">Engaging Videos, Images, and Social Media Posts</span>—<br />
+        Instantly Repurpose Tweets into<br />
+        <span className="text-[#8B5CF6]">Videos, Images & Posts</span>—<br />
         In One Click!
       </h1>
       <p className="mx-auto max-w-[700px] text-gray-500 text-xl md:text-2xl leading-relaxed dark:text-gray-400 py-4">
